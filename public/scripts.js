@@ -19,8 +19,9 @@ $( document ).ready(function() {
 
                 switch(deathSelectVal) {
                     case 0: deathSelectVal === 'drug_overdose';
-                    $celebInfo.text('drug_overdose girls');
-                    $celebInfo.text() = 'drug_overdose boys';
+                    console.log($('.celebInfo'));
+                    $('.celebInfo').text('yolo');
+                    $('.celebInfo').text('swaggins');
                     console.log('drug overdose');
                     case 1: deathSelectVal === 'suicide';
                          console.log('suicide');
@@ -48,7 +49,7 @@ function createProfile() {
     var $celebBox = $('<div></div>', {class:'celebBox'});
     var $celebHeading = $('<h1></h1>', {class:'celebHeading', text:`Celebrity deaths: ${deathSelectVal.replace('_', ' ')}`});
     var $celebDivider = $('<hr>', {class:'celebDivider'});
-    var $celebInfo = $('<p></p>', {text:'This is some placeholder text'});
+    var $celebInfo = $('<p></p>', {class:'celebInfo', text:'This is some placeholder text'});
     $('.celebBox').remove();
 
     $body.append($celebBox);

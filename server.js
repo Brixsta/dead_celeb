@@ -23,11 +23,11 @@ app.get('/api/dead_celeb', (req,res)=>{
 });
 
 
-app.get('/api/dead_celeb/:id', (req,res)=>{
-    let {id} = req.params;
+app.get('/api/dead_celeb/:death', (req,res)=>{
+    let {death} = req.params;
 
     console.log('THIS IS ID:', id);
-    db.query('SELECT * FROM celeb WHERE celebId = $1;', [id], (err,data)=>{
+    db.query('SELECT * FROM death WHERE typeOfDeath = $1;', [death], (err,data)=>{
         if(err) {
             console.log('THIS IS THE ERROR: ', err);
             res.append('Content-Type', 'plain/text');

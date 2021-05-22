@@ -10,17 +10,15 @@ $( document ).ready(function() {
 
         //http://cors-anywhere.herokuapp.com/
 
-        $.get('https://hidden-plateau-56299.herokuapp.com/api/dead_celeb', (data) => {
+        $.get(`https://hidden-plateau-56299.herokuapp.com/api/dead_celeb/${deathSelect.val()}`, (data) => {
     //  var results = JSON.parse(data) 
                 var results = data;
                 glob = results;
                 console.log('These are the results: ', results);
 
                 createProfile();
-                console.log('THIS IS THE GLOB INSIDE OF $GET: ', glob);
+                console.log('Death Select Value ', deathSelect.val());
             });
-
-            console.log('THIS IS THE GLOB OUTSIDE OF THE $GET ', glob);
     });
 });
 

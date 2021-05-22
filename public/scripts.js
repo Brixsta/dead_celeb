@@ -8,7 +8,7 @@ $( document ).ready(function() {
     $searchBtn.click((event)=>{
         createProfile();
 
-        $.get('http://cors-anywhere.herokuapp.com/http://hidden-plateau-56299.herokuapp.com/dead_celeb', (data) => {
+        $.get('http://cors-anywhere.herokuapp.com/https://hidden-plateau-56299.herokuapp.com/dead_celeb', (data) => {
     //  var results = JSON.parse(data) 
                 var results = JSON.parse(data);
                 glob = results;

@@ -12,7 +12,7 @@ $( document ).ready(function() {
 
         $.get('https://hidden-plateau-56299.herokuapp.com/api/dead_celeb', (data) => {
     //  var results = JSON.parse(data) 
-                var results = JSON.parse(data);
+                var results = data;
                 glob = results;
                 console.log('These are the results: ', results);
             });

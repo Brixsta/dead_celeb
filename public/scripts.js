@@ -15,10 +15,11 @@ $( document ).ready(function() {
                 console.log('These are the results: ', results);
 
                 createProfile();
-                console.log('Death Select Value toLowerCase ', deathSelectVal);
+                console.log('Death Select Value ', deathSelectVal);
 
                 switch(deathSelectVal) {
                     case 0: deathSelectVal === 'drug_overdose';
+                    $celebInfo.text('drug_overdose');
                     console.log('drug overdose');
                     case 1: deathSelectVal === 'suicide';
                          console.log('suicide');

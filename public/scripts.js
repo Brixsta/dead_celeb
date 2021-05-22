@@ -19,7 +19,8 @@ $( document ).ready(function() {
 
                 switch(deathSelectVal) {
                     case 0: deathSelectVal === 'drug_overdose';
-                    $celebInfo.text('drug_overdose');
+                    $celebInfo.text('drug_overdose girls');
+                    $celebInfo.text() = 'drug_overdose boys';
                     console.log('drug overdose');
                     case 1: deathSelectVal === 'suicide';
                          console.log('suicide');

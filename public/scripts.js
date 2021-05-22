@@ -10,7 +10,7 @@ $( document ).ready(function() {
 
         //http://cors-anywhere.herokuapp.com/
 
-        $.get('https://hidden-plateau-56299.herokuapp.com/dead_celeb', (data) => {
+        $.get('https://hidden-plateau-56299.herokuapp.com/api/dead_celeb', (data) => {
     //  var results = JSON.parse(data) 
                 var results = JSON.parse(data);
                 glob = results;

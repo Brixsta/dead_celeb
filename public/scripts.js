@@ -2,6 +2,7 @@ var $container = $('.container');
 var $searchBtn = $('.searchBtn');
 var $deathSelect = $('.deathSelect');
 var $body = $('body');
+var glob;
 
 $( document ).ready(function() {
     $searchBtn.click((event)=>{
@@ -10,9 +11,12 @@ $( document ).ready(function() {
 
         $.get('https://hidden-plateau-56299.herokuapp.com/dead_celeb', (data) => {
     //  var results = JSON.parse(data) 
-
-                console.log(data);
+                var results = JSON.parse(data);
+                glob = results;
+                console.log('These are the results: ', results);
             });
+
+            console.log('THIS IS THE GLOB: ', glob);
     });
 });
 

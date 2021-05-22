@@ -33,6 +33,7 @@ $( document ).ready(function() {
 });
 
 function createProfile() {
+    let deathSelectVal = $deathSelect.val().toLowerCase();
     var $celebBox = $('<div></div>', {class:'celebBox'});
     var $celebHeading = $('<h1></h1>', {class:'celebHeading', text:`Celebrity deaths: ${deathSelectVal.replace('_', ' ')}`});
     var $celebDivider = $('<hr>', {class:'celebDivider'});

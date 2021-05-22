@@ -18,15 +18,24 @@ $( document ).ready(function() {
                 console.log('Death Select Value toLowerCase ', deathSelectVal);
 
                 switch(deathSelectVal) {
-                    case 'drug_overdose': console.log('drug overdose');
-                    case 'suicide': console.log('suicide');
-                    case 'murder': console.log('murder');
-                    case 'plane_crash': console.log('plane_crash');
-                    case 'skiing_accident': console.log('skiing_accident');
-                    case 'botched_surgery': console.log('botched surgery');
-                    case 'natural_causes': console.log('natural causes');
-                    case 'aids': console.log('aids');
-                    case 'car_crash': console.log('car crash');
+                    case 0: deathSelectVal === 'drug_overdose';
+                    console.log('drug overdose');
+                    case 1: deathSelectVal === 'suicide';
+                         console.log('suicide');
+                    case 2: deathSelectVal === 'murder';
+                    console.log('murder');
+                    case 3: deathSelectVal === 'plane_crash';
+                         console.log('plane_crash');
+                    case 4: deathSelectVal === 'skiing_accident';
+                     console.log('skiing_accident');
+                    case 5: deathSelectVal === 'botched_surgery';
+                     console.log('botched surgery');
+                    case 6: deathSelectVal === 'natural_causes';
+                    console.log('natural causes');
+                    case 7: deathSelectVal === 'aids';
+                    console.log('aids');
+                    case 8: deathSelectVal === 'car_crash';
+                         console.log('car crash');
                 }
             });
     });

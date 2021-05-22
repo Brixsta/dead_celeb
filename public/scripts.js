@@ -2,6 +2,7 @@ var $container = $('.container');
 var $searchBtn = $('.searchBtn');
 var $deathSelect = $('.deathSelect');
 var $body = $('body');
+var results;
 
 $( document ).ready(function() {
     $searchBtn.click((event)=>{
@@ -11,7 +12,7 @@ $( document ).ready(function() {
 
         $.get(`https://hidden-plateau-56299.herokuapp.com/api/dead_celeb/`, (data) => {
     //  var results = JSON.parse(data)
-                var results = data;
+                results = data;
                 console.log('These are the results: ', results);
 
                 createProfile();
@@ -21,7 +22,7 @@ $( document ).ready(function() {
                     case 0: deathSelectVal === 'drug_overdose';
                     console.log($('.celebInfo'));
                     $('.celebInfo').text('yolo');
-                    $('.celebInfo').text('swaggins');
+                    $('.celebInfo').text() ='swaggins';
                     console.log('drug overdose');
                     case 1: deathSelectVal === 'suicide';
                          console.log('suicide');

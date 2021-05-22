@@ -6,6 +6,9 @@ const db = require('./db/db_configuration');
 const bodyParser = require('body-parser');
 
 app.use(bodyParser.json());
+app.use(express.json());
+app.use(express.static('public'))
+
 app.get('/api/dead_celeb', (req,res)=>{
     db.query('SELECT * FROM celeb;', (err,data)=>{
         if(err) {

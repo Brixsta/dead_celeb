@@ -5,19 +5,19 @@ var $body = $('body');
 
 $( document ).ready(function() {
     $searchBtn.click((event)=>{
-        
+    let deathSelectVal = $deathSelect.val().toLowerCase();
 
         //http://cors-anywhere.herokuapp.com/
 
         $.get(`https://hidden-plateau-56299.herokuapp.com/api/dead_celeb/`, (data) => {
-    //  var results = JSON.parse(data) 
+    //  var results = JSON.parse(data)
                 var results = data;
                 console.log('These are the results: ', results);
 
                 createProfile();
-                console.log('Death Select Value toLowerCase ', $deathSelect.val().toLowerCase);
+                console.log('Death Select Value toLowerCase ', deathSelectVal);
 
-                switch($deathSelect.val().toLowerCase()) {
+                switch(deathSelectVal) {
                     case 'drug_overdose': console.log('drug overdose');
                     case 'suicide': console.log('suicide');
                     case 'murder': console.log('murder');
@@ -34,7 +34,7 @@ $( document ).ready(function() {
 
 function createProfile() {
     var $celebBox = $('<div></div>', {class:'celebBox'});
-    var $celebHeading = $('<h1></h1>', {class:'celebHeading', text:`Celebrity deaths: ${$deathSelect.val().toLowerCase().replace('_', ' ')}`});
+    var $celebHeading = $('<h1></h1>', {class:'celebHeading', text:`Celebrity deaths: ${deathSelectVal.replace('_', ' ')}`});
     var $celebDivider = $('<hr>', {class:'celebDivider'});
     var $celebInfo = $('<p></p>', {text:'This is some placeholder text'});
     $('.celebBox').remove();

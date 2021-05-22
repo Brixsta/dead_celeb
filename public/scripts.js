@@ -10,7 +10,7 @@ $( document ).ready(function() {
 
         //http://cors-anywhere.herokuapp.com/
 
-        $.get(`https://hidden-plateau-56299.herokuapp.com/api/dead_celeb/${deathSelect.val()}`, (data) => {
+        $.get(`https://hidden-plateau-56299.herokuapp.com/api/dead_celeb/${$deathSelect.val()}`, (data) => {
     //  var results = JSON.parse(data) 
                 var results = data;
                 glob = results;
@@ -24,7 +24,7 @@ $( document ).ready(function() {
 
 function createProfile() {
     var $celebBox = $('<div></div>', {class:'celebBox'});
-    var $celebHeading = $('<h1></h1>', {class:'celebHeading', text:`Celebrity deaths: ${$deathSelect.val().toLowerCase()}`});
+    var $celebHeading = $('<h1></h1>', {class:'celebHeading', text:`Celebrity deaths: ${$deathSelect.val().toLowerCase().replace('_', ' ')}`});
     var $celebDivider = $('<hr>', {class:'celebDivider'});
     var $celebInfo = $('<p></p>', {text:'This is some placeholder text'});
     $('.celebBox').remove();

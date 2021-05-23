@@ -18,6 +18,7 @@ deathObj = {
      car_crash: []
 };
 
+bloodSplatterEffects();
 
 $( document ).ready(function() {
     $searchBtn.click((event)=>{
@@ -30,7 +31,7 @@ $( document ).ready(function() {
      // console.log($bloodSplatter2);
      // console.log($bloodSplatter3);
 
-     bloodSplatterEffects();
+    
      
      deathSelectVal = $deathSelect.val().toLowerCase();
 

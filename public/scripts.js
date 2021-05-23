@@ -86,13 +86,15 @@ function createTable (array) {
      let $celebIdHeading = $('<th></th>', {text:'Celeb Id'});
      let $deathIdHeading = $('<th></th>', {text:'Death Id'});
 
+     $table.append($firstNameHeading, $lastNameHeading, $celebIdHeading, $deathIdHeading);
+     $('.celebBox').append($table);
+
      for(let i=0; i<array.length; i++) {
           var $tableRow = $('<tr></tr>');
           $('.celebTable').append($tableRow);
      }
 
-     $table.append($firstNameHeading, $lastNameHeading, $celebIdHeading, $deathIdHeading);
-     $('.celebBox').append($table);
+     
 }
      
 

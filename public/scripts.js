@@ -95,14 +95,17 @@ function listOfDead (array, deathIdNum) {
 
 function createTable (array) {
      var $celebTable = $('<table></table', {class:'celebTable'});
-     let $firstNameHeading = $('<th></th>', {text:'First Name'});
-     let $lastNameHeading = $('<th></th>', {text:'Last Name'});
-     let $celebIdHeading = $('<th></th>', {text:'Celeb Id'});
-     let $deathIdHeading = $('<th></th>', {text:'Death Id'});
-     let tableRowAmt = celebObj.deathId.filter(element => element === deathNumber).length; 
+     var $firstNameHeading = $('<th></th>', {text:'First Name'});
+     var $lastNameHeading = $('<th></th>', {text:'Last Name'});
+     var $celebIdHeading = $('<th></th>', {text:'Celeb Id'});
+     var $deathIdHeading = $('<th></th>', {text:'Death Id'});
+     var tableRowAmt = celebObj.deathId.filter(element => element === deathNumber).length; 
 
      $('.celebTable').remove();
      $('.tableRow').remove();
+
+     console.log('This is the celeb Table', $('.celebTable'));
+     console.log('This is the tableRow', $('.tableRow'));
 
      $celebTable.append($firstNameHeading, $lastNameHeading, $celebIdHeading, $deathIdHeading);
      $('.celebBox').append($celebTable);

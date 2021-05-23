@@ -98,9 +98,9 @@ body {
 .celebTable {
     margin:auto;
     border-collapse:collapse;
-    padding:10px;
 }
 
 table, th, td {
     border: 1px solid black;
+    padding:5px;
   }

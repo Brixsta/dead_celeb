@@ -98,14 +98,14 @@ function createTable (array) {
 
      for(let i=0; i< tableRowAmt; i++) {
           var $tableRow = ('.tableRow');
-          var $firstNameCell = $('<td></td>', {text:'text' + i.toString()});
-          var $lastNameCell = $('<td></td>', {text:'text' + i.toString()});
-          var $celebIdCell = $('<td></td>', {text:'text' + i.toString()});
-          var $deathIdCell = $('<td></td>', {text:'text' + i.toString()});
+          var $firstNameCell = document.createElement('td');
+          var $lastNameCell = document.createElement('td');
+          var $celebIdCell = document.createElement('td');
+          var $deathIdCell = document.createElement('td');
 
           console.log('What a jquery row looks like ', $('.tableRow')[i]);
 
-         $('.tableRow')[i].append('firstName', 'lastName', 'celeb', 'death');
+         $('.tableRow')[i].append($firstNameCell, $lastNameCell, $celebIdCell, $deathIdCell);
      }
 
 

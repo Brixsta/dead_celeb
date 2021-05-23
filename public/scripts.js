@@ -94,7 +94,7 @@ function listOfDead (array, deathIdNum) {
 }
 
 function createTable (array) {
-     let $celebTable = $('<table></table', {class:'celebTable'});
+     var $celebTable = $('<table></table', {class:'celebTable'});
      let $firstNameHeading = $('<th></th>', {text:'First Name'});
      let $lastNameHeading = $('<th></th>', {text:'Last Name'});
      let $celebIdHeading = $('<th></th>', {text:'Celeb Id'});

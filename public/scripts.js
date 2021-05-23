@@ -101,16 +101,17 @@ function createTable (array) {
      let $lastNameHeading = $('<th></th>', {text:'Last Name'});
      let $celebIdHeading = $('<th></th>', {text:'Celeb Id'});
      let $deathIdHeading = $('<th></th>', {text:'Death Id'});
+     let tableRowAmt = celebObj.deathId.filter(element => element === deathNumber).length; 
 
      $table.append($firstNameHeading, $lastNameHeading, $celebIdHeading, $deathIdHeading);
      $('.celebBox').append($table);
 
-     console.log('Here is the number before the table', celebObj.deathId.filter(element => element === deathNumber));
+     console.log('Here is the number before the table', tableRowAmt);
 
-     // for(let i=0; i<celebObj.deathNumber.length; i++) {
-     //      var $tableRow = $('<tr></tr>');
-     //      $('.celebTable').append($tableRow);
-     // }
+     for(let i=0; i<tableRowAmt; i++) {
+          var $tableRow = $('<tr></tr>');
+          $('.celebTable').append($tableRow);
+     }
 
      
 }

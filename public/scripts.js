@@ -22,17 +22,7 @@ bloodSplatterEffects();
 
 $( document ).ready(function() {
     $searchBtn.click((event)=>{
-     // var $bloodSplatter1 = $('.bloodSplatter1');
-     // var $bloodSplatter2 = $('.bloodSplatter2');
-     // var $bloodSplatter1 = $('.bloodSplatter3');
-
-     
-     // console.log($bloodSplatter1);
-     // console.log($bloodSplatter2);
-     // console.log($bloodSplatter3);
-
-    
-     
+ 
      deathSelectVal = $deathSelect.val().toLowerCase();
 
           if(deathSelectVal === 'drug_overdose') {
@@ -163,12 +153,16 @@ function rowAmtToCreate () {
 }
 
 function bloodSplatterEffects () {
+
+     console.log('bloodsplatter executed');
      $('.bloodSplatter1').hide();
      $('.bloodSplatter2').hide();
      $('.bloodSplatter3').hide();
      
      fadeInAndOut();
-     bloodSplatterEffects();
+     setTimeout(function(){
+          bloodSplatterEffects();
+     },22000);
 }
 
 function fadeInAndOut () {
@@ -184,11 +178,11 @@ function fadeInAndOut () {
 
      setTimeout(function(){
           $('.bloodSplatter2').fadeIn();
-     },11000)
+     },11000);
 
      setTimeout(function(){
           $('.bloodSplatter2').fadeOut();
-     },16000)
+     },16000);
 
      setTimeout(function(){
           $('.bloodSplatter3').fadeIn();

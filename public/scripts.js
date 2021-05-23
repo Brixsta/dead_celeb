@@ -102,7 +102,7 @@ function createTable (array) {
           var $celebIdCell = $('<td></td>', {text:'text' + i.toString()});
           var $deathIdCell = $('<td></td>', {text:'text' + i.toString()});
 
-          $('.tableRow').append($firstNameCell, $lastNameCell, $celebIdCell, $deathIdCell);
+          $('.celebTable').append($firstNameCell, $lastNameCell, $celebIdCell, $deathIdCell);
      }
 }
 

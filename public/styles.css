@@ -112,23 +112,7 @@ table, th, td {
       color:white;
   }
 
-  .bloodSplatter1:first-child {
-      position:absolute;
-      height:30px;
-      width:30px;
-      top:10px;
-      left:10px;
-  }
-
   .bloodSplatter1 {
-      top:45px;
-      left:60px;
-      position:absolute;
-      height:30px;
-      width:30px;
-  }
-
-  .bloodSplatter1:last-child {
     top:70px;
     left:105px;
     position:absolute;
@@ -140,7 +124,7 @@ table, th, td {
       position:absolute;
       height:60px;
       width:80px;
-      right:10px;
-      bottom:5px;
+      right:-10px;
+      bottom:-5px;
       border-radius:45%;
   }

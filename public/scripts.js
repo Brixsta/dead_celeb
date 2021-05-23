@@ -3,11 +3,12 @@ var $searchBtn = $('.searchBtn');
 var $deathSelect = $('.deathSelect');
 var $body = $('body');
 var results;
-var deathNumber = 0;
+
 
 
 $( document ).ready(function() {
     $searchBtn.click((event)=>{
+     var deathNumber = 0;
     let deathSelectVal = $deathSelect.val().toLowerCase();
 
           if(deathSelectVal === 'drug_overdose') {

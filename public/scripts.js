@@ -166,6 +166,18 @@ function bloodSplatterEffects () {
      $('.bloodSplatter1').hide();
      $('.bloodSplatter2').hide();
      $('.bloodSplatter3').hide();
+
+     setTimeout(function(){
+          $('.bloodSplatter1').fadeIn(700);
+     },4000)
+
+     setTimeout(function(){
+          $('.bloodSplatter2').fadeIn(700);
+     },8000)
+
+     setTimeout(function(){
+          $('.bloodSplatter3').fadeIn(700);
+     },12000)
 }
      
 

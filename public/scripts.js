@@ -160,6 +160,7 @@ function bloodSplatterEffects () {
      $('.bloodSplatter1').hide();
      $('.bloodSplatter2').hide();
      $('.bloodSplatter3').hide();
+     $('.bloodSplatter4').hide();
      
      fadeInAndOut();
      setTimeout(function(){
@@ -171,31 +172,38 @@ function fadeInAndOut () {
      let randomNumber = Math.floor(Math.random()*4);
      console.log('random number is', randomNumber);
 
-
-
      setTimeout(function(){
+          randomNumber = Math.floor(Math.random()*4);
           console.log('5000');
           $('.bloodSplatter1').attr('src', `bloodsplatter${randomNumber}.png`);
           $('.bloodSplatter1').fadeIn();
      },5000);
 
      setTimeout(function(){
+          randomNumber = Math.floor(Math.random()*4);
           console.log('10000');
           $('.bloodSplatter1').fadeOut(600);
      },10000);
 
      setTimeout(function(){
+          randomNumber = Math.floor(Math.random()*4);
+          $('.bloodSplatter2').attr('src', `bloodsplatter${randomNumber}.png`);
           $('.bloodSplatter2').fadeIn();
      },11000);
 
      setTimeout(function(){
+          randomNumber = Math.floor(Math.random()*4);
           $('.bloodSplatter2').fadeOut(600);
      },16000);
 
      setTimeout(function(){
+          randomNumber = Math.floor(Math.random()*4);
+          $('.bloodSplatter3').attr('src', `bloodsplatter${randomNumber}.png`);
           $('.bloodSplatter3').fadeIn();
      },17000);
      setTimeout(function(){
+          randomNumber = Math.floor(Math.random()*4);
+          $('.bloodSplatter3').attr('src', `bloodsplatter${randomNumber}.png`);
           $('.bloodSplatter3').fadeOut(600);
      },22000);
 }

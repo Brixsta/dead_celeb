@@ -103,10 +103,13 @@ function createTable (array) {
      var $lastNameHeading = $('<th></th>', {text:'Last Name'});
      var $celebIdHeading = $('<th></th>', {text:'Celeb Id'});
      var $deathIdHeading = $('<th></th>', {text:'Death Id'});
-     var tableRowAmt = results.deathid.filter(element => element === deathNumber).length; 
-     
+     // var tableRowAmt = results.deathid.filter(element => element === deathNumber).length; 
 
-     console.log('This is the table row amt', tableRowAmt);
+     console.log('heres the values of results.deathid: ',Object.values(results.deathid));
+     
+     console.log('here are the results.deathid: ', results.deathid)
+     console.log('here is the death number: ', deathNumber);
+     // console.log('This is the table row amt: ', tableRowAmt);
 
 
      $celebTable.append($firstNameHeading, $lastNameHeading, $celebIdHeading, $deathIdHeading);

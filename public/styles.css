@@ -94,3 +94,8 @@ body {
 .celebInfo {
     
 }
+
+.celebTable {
+    margin:auto;
+    border:solid 1px black;
+}

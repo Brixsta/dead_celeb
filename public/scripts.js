@@ -105,7 +105,7 @@ function createTable (array) {
      var $deathIdHeading = $('<th></th>', {text:'Death Id'});
      // var tableRowAmt = results.deathid.filter(element => element === deathNumber).length; 
      
-     console.log('Object entries deathObj: ', Object.entries(deathObj));
+     console.log('Object entries deathObj: ', Object.values(deathObj));
 
 
 
@@ -113,10 +113,10 @@ function createTable (array) {
      $celebTable.append($firstNameHeading, $lastNameHeading, $celebIdHeading, $deathIdHeading);
      $('.celebBox').append($celebTable);
 
-     for(let i=0; i<tableRowAmt; i++) {
-          var $tableRow = $('<tr></tr>', {class:'tableRow'});
-          $('.celebTable').append($tableRow);
-     }   
+     // for(let i=0; i<tableRowAmt; i++) {
+     //      var $tableRow = $('<tr></tr>', {class:'tableRow'});
+     //      $('.celebTable').append($tableRow);
+     // }   
 }
 
 function celebToDeathMap (array) {

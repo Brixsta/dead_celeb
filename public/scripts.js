@@ -97,13 +97,17 @@ function createTable (array) {
      }   
 
      for(let i=0; i< tableRowAmt; i++) {
+          var $tableRow = ('.tableRow');
           var $firstNameCell = $('<td></td>', {text:'text' + i.toString()});
           var $lastNameCell = $('<td></td>', {text:'text' + i.toString()});
           var $celebIdCell = $('<td></td>', {text:'text' + i.toString()});
           var $deathIdCell = $('<td></td>', {text:'text' + i.toString()});
 
-          $('.celebTable').append($firstNameCell, $lastNameCell, $celebIdCell, $deathIdCell);
+          $tableRow[i].append($firstNameCell, $lastNameCell, $celebIdCell, $deathIdCell);
      }
+
+     console.log('What a jquery row looks like ', $('.tableRow'));
+     console.log('what a variable jquery row looks like', $tableRow);
 }
 
 function celebToDeathMap (array) {

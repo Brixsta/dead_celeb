@@ -120,10 +120,21 @@ table, th, td {
       left:10px;
   }
 
+  .bloodSplatter1:nth-child(2) {
+      top:15px;
+      left:20px;
+  }
+
+  .bloodSplatter1:nth-child(3) {
+    top:30px;
+    left:25px;
+}
+
   .bloodSplatter2 {
       position:absolute;
-      height:100px;
-      width:100px;
+      height:60px;
+      width:80px;
       right:10px;
       bottom:5px;
+
   }

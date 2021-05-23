@@ -99,7 +99,7 @@ function createTable (array) {
      for(let i=0; i< tableRowAmt; i++) {
           var $tableRow = ('.tableRow');
           var $firstNameCell = document.createElement('td');
-          var $lastNameCell = document.createElement('td');
+          var $lastNameCell = document.createElement('td', textContent='sup');
           var $celebIdCell = document.createElement('td');
           var $deathIdCell = document.createElement('td');
 

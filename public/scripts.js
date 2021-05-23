@@ -165,7 +165,7 @@ function bloodSplatterEffects () {
      fadeInAndOut();
      setTimeout(function(){
           bloodSplatterEffects();
-     },23000);
+     },30000);
 }
 
 function fadeInAndOut () {
@@ -174,38 +174,55 @@ function fadeInAndOut () {
 
      setTimeout(function(){
           randomNumber = Math.floor(Math.random()*4);
-          console.log('5000');
+          console.log('random number is:', randomNumber);
           $('.bloodSplatter1').attr('src', `bloodsplatter${randomNumber}.png`);
-          $('.bloodSplatter1').fadeIn();
+          $('.bloodSplatter1').fadeIn(800);
      },5000);
 
      setTimeout(function(){
           randomNumber = Math.floor(Math.random()*4);
+          console.log('random number is:', randomNumber);
           console.log('10000');
           $('.bloodSplatter1').fadeOut(600);
      },10000);
 
      setTimeout(function(){
           randomNumber = Math.floor(Math.random()*4);
+          console.log('random number is:', randomNumber);
           $('.bloodSplatter2').attr('src', `bloodsplatter${randomNumber}.png`);
-          $('.bloodSplatter2').fadeIn();
+          $('.bloodSplatter2').fadeIn(800);
      },11000);
 
      setTimeout(function(){
           randomNumber = Math.floor(Math.random()*4);
+          console.log('random number is:', randomNumber);
           $('.bloodSplatter2').fadeOut(600);
      },16000);
 
      setTimeout(function(){
           randomNumber = Math.floor(Math.random()*4);
+          console.log('random number is:', randomNumber);
           $('.bloodSplatter3').attr('src', `bloodsplatter${randomNumber}.png`);
-          $('.bloodSplatter3').fadeIn();
+          $('.bloodSplatter3').fadeIn(800);
      },17000);
      setTimeout(function(){
           randomNumber = Math.floor(Math.random()*4);
+          console.log('random number is:', randomNumber);
           $('.bloodSplatter3').attr('src', `bloodsplatter${randomNumber}.png`);
           $('.bloodSplatter3').fadeOut(600);
      },22000);
+     setTimeout(function(){
+          randomNumber = Math.floor(Math.random()*4);
+          console.log('random number is:', randomNumber);
+          $('.bloodSplatter4').attr('src', `bloodsplatter${randomNumber}.png`);
+          $('.bloodSplatter4').fadeIn(600);
+     },23000);
+     setTimeout(function(){
+          randomNumber = Math.floor(Math.random()*4);
+          console.log('random number is:', randomNumber);
+          $('.bloodSplatter4').attr('src', `bloodsplatter${randomNumber}.png`);
+          $('.bloodSplatter4').fadeOut(800);
+     },28000);
 }
 
 

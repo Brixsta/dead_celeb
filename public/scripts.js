@@ -100,7 +100,7 @@ function createTable (array) {
      for(let i=0; i< tableRowAmt; i++) {
           var tableRow = ('.tableRow');
           var firstNameCell = document.createElement('td');
-          console.log('deathselectVal is:', $deathSelect.val());
+          console.log('deathselectVal is:', deathSelectVal);
           // firstNameCell.textContent = deathObj.$deathSelect.val()[i];
           var lastNameCell = document.createElement('td');
           var celebIdCell = document.createElement('td');

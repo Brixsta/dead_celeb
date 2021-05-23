@@ -19,7 +19,7 @@ $( document ).ready(function() {
 
                 console.log($deathSelect.val());
 
-                switch($deathSelect.val().toLowerCase()) {
+                switch($deathSelect.val()) {
                     case 0: $deathSelect.val().toLowerCase() === 'drug_overdose';
                          deathNumber = 111;
                          console.log('drug overdose');

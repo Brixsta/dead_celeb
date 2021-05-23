@@ -32,31 +32,22 @@ $( document ).ready(function() {
 
           if(deathSelectVal === 'drug_overdose') {
                deathNumber = 111;
-               console.log('drug_overdose');
           } else if (deathSelectVal === 'suicide') {
                deathNumber = 222;
-               console.log('suicide');
           } else if (deathSelectVal === 'murder') {
                deathNumber = 333;
-               console.log('murder');
           } else if (deathSelectVal === 'plane_crash') {
                deathNumber = 444;
-               console.log('plane_crash');
           } else if (deathSelectVal === 'skiing_accident') {
                deathNumber = 555;
-               console.log('skiing_accident');
           } else if (deathSelectVal === 'botched_surgery') {
                deathNumber = 666;
-               console.log('botched_surgery');
           } else if (deathSelectVal === 'natural_causes') {
                deathNumber = 777;
-               console.log('natural_causes');
           } else if(deathSelectVal === 'aids') {
                deathNumber = 888;
-               console.log('aids');
           } else if (deathSelectVal === 'car_crash') {
                deathNumber = 999;
-               console.log('car crash');
           }
 
         $.get(`https://hidden-plateau-56299.herokuapp.com/api/dead_celeb/`, (data) => {
@@ -71,7 +62,6 @@ $( document ).ready(function() {
                     celebObj.deathId.push(results[i].deathid);
                 }
                 celebToDeathMap(results);
-                console.log('This is the celeb OBJECT:', celebObj);
 
                 createProfile();  
                 createTable(results);
@@ -113,18 +103,14 @@ function createTable (array) {
      var $lastNameHeading = $('<th></th>', {text:'Last Name'});
      var $celebIdHeading = $('<th></th>', {text:'Celeb Id'});
      var $deathIdHeading = $('<th></th>', {text:'Death Id'});
-     var tableRowAmt = celebObj.deathId.filter(element => element === deathNumber).length; 
+     var tableRowAmt = results.deathid.filter(element => element === deathNumber).length; 
+     
 
-     $('.celebTable').remove();
-     $('.tableRow').remove();
+     console.log('This is the table row amt', tableRowAmt);
 
-     console.log('This is the celeb Table', $('.celebTable'));
-     console.log('This is the tableRow', $('.tableRow'));
 
      $celebTable.append($firstNameHeading, $lastNameHeading, $celebIdHeading, $deathIdHeading);
      $('.celebBox').append($celebTable);
-
-     console.log('Here is the number before the table', tableRowAmt);
 
      for(let i=0; i<tableRowAmt; i++) {
           var $tableRow = $('<tr></tr>', {class:'tableRow'});

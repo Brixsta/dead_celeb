@@ -195,8 +195,6 @@ function bloodSplatterEffects () {
           alert('22 seconds');
           $('.bloodSplatter3').fadeOut();
      },22000);
-
-     bloodSplatterEffects();
 }
      
 

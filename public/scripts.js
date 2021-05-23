@@ -4,7 +4,6 @@ var $deathSelect = $('.deathSelect');
 var $body = $('body');
 var results;
 var deathNumber = 0;
-var rowLength = 0;
 
 deathObj = {
      drug_overdose: [],
@@ -63,9 +62,7 @@ $( document ).ready(function() {
      var $celebInfo = $('<p></p>', {class:'celebInfo', text:`${JSON.stringify(listOfDead(results, deathNumber))}`});
 
      $('.celebBox').remove();
-
-
-
+     
      $body.append($celebBox);
      $celebBox.append($celebHeading, $celebDivider, $celebInfo);
      $celebBox.hide();
@@ -91,18 +88,13 @@ function createTable (array) {
      var $deathIdHeading = $('<th></th>', {text:'Death Id'});
      var tableRowAmt = rowAmtToCreate();
 
-     console.log('Heres the table row Amt', tableRowAmt);
-
-
-
-
      $celebTable.append($firstNameHeading, $lastNameHeading, $celebIdHeading, $deathIdHeading);
      $('.celebBox').append($celebTable);
 
-     // for(let i=0; i<tableRowAmt; i++) {
-     //      var $tableRow = $('<tr></tr>', {class:'tableRow'});
-     //      $('.celebTable').append($tableRow);
-     // }   
+     for(let i=0; i<tableRowAmt; i++) {
+          var $tableRow = $('<tr></tr>', {class:'tableRow'});
+          $('.celebTable').append($tableRow);
+     }   
 }
 
 function celebToDeathMap (array) {

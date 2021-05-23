@@ -104,7 +104,9 @@ function createTable (array) {
      $table.append($firstNameHeading, $lastNameHeading, $celebIdHeading, $deathIdHeading);
      $('.celebBox').append($table);
 
-     // for(let i=0; i<array.deathid.length; i++) {
+     console.log('Here is the number before the table', deathNumber);
+
+     // for(let i=0; i<celebObj.deathId; i++) {
      //      var $tableRow = $('<tr></tr>');
      //      $('.celebTable').append($tableRow);
      // }

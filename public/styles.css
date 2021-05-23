@@ -125,7 +125,7 @@ table, th, td {
       position:absolute;
       height:60px;
       width:80px;
-      right:-1px;
+      left:-1px;
       bottom:-1px;
       border-radius:45%;
       opacity:.8;
@@ -135,7 +135,7 @@ table, th, td {
     height: 90px;
     width:140px;
     position:absolute;
-    right:140px;
-    top:0px;
+    right:-1px;
+    bottom:-1px;
     opacity: .7;
   }

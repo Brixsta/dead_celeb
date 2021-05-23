@@ -4,6 +4,7 @@ var $deathSelect = $('.deathSelect');
 var $body = $('body');
 var results;
 var deathNumber = 0;
+var deathStyle = '';
 celebObj = {
      firstName: [],
      lastName: [],
@@ -104,7 +105,7 @@ function createTable (array) {
      $table.append($firstNameHeading, $lastNameHeading, $celebIdHeading, $deathIdHeading);
      $('.celebBox').append($table);
 
-     console.log('Here is the number before the table', celebObj.deathNumber.length);
+     console.log('Here is the number before the table', celebObj.deathId.filter(element => element === deathNumber));
 
      // for(let i=0; i<celebObj.deathNumber.length; i++) {
      //      var $tableRow = $('<tr></tr>');

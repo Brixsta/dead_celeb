@@ -7,6 +7,7 @@ var results;
 $( document ).ready(function() {
     $searchBtn.click((event)=>{
     let deathSelectVal = $deathSelect.val().toLowerCase();
+    let deathNumber;
 
         //http://cors-anywhere.herokuapp.com/
 
@@ -20,25 +21,31 @@ $( document ).ready(function() {
 
                 switch(deathSelectVal) {
                     case 0: deathSelectVal === 'drug_overdose';
-                    console.log($('.celebInfo'));
-                    $('.celebInfo').text('yolo');
-                    $('.celebInfo').text() ='swaggins';
-                    console.log('drug overdose');
+                         deathNumber = 111;
+                         console.log('drug overdose');
                     case 1: deathSelectVal === 'suicide';
+                         deathNumber = 222;
                          console.log('suicide');
                     case 2: deathSelectVal === 'murder';
-                    console.log('murder');
+                         deathNumber = 333;
+                         console.log('murder');
                     case 3: deathSelectVal === 'plane_crash';
+                         deathNumber = 444;
                          console.log('plane_crash');
                     case 4: deathSelectVal === 'skiing_accident';
-                     console.log('skiing_accident');
+                         deathNumber = 555;
+                         console.log('skiing_accident');
                     case 5: deathSelectVal === 'botched_surgery';
-                     console.log('botched surgery');
+                         deathNumber = 666;
+                         console.log('botched surgery');
                     case 6: deathSelectVal === 'natural_causes';
-                    console.log('natural causes');
+                         deathNumber = 777;
+                         console.log('natural causes');
                     case 7: deathSelectVal === 'aids';
-                    console.log('aids');
+                         deathNumber = 888;
+                         console.log('aids');
                     case 8: deathSelectVal === 'car_crash';
+                         deathNumber = 999;
                          console.log('car crash');
                 }
             });
@@ -46,11 +53,12 @@ $( document ).ready(function() {
 });
 
 function createProfile() {
+    console.log('DEATH NUMBER IS: ', deathNumber);
     let deathSelectVal = $deathSelect.val().toLowerCase();
     var $celebBox = $('<div></div>', {class:'celebBox'});
     var $celebHeading = $('<h1></h1>', {class:'celebHeading', text:`Celebrity deaths: ${deathSelectVal.replace('_', ' ')}`});
     var $celebDivider = $('<hr>', {class:'celebDivider'});
-    var $celebInfo = $('<p></p>', {class:'celebInfo', text:`${JSON.stringify(listOfDead(results, 222))}`});
+    var $celebInfo = $('<p></p>', {class:'celebInfo', text:`${JSON.stringify(listOfDead(results, deathNumber))}`});
 
     $('.celebBox').remove();
 

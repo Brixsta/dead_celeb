@@ -24,7 +24,7 @@ $( document ).ready(function() {
 
     function createProfile() {
                          
-     switch(deathSelectVal) {
+     switch($deathSelect.val().toLowerCase()) {
           case 0: $deathSelect.val().toLowerCase() === 'drug_overdose';
                deathNumber = 111;
                console.log('drug overdose');

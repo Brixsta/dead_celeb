@@ -112,7 +112,7 @@ table, th, td {
       color:white;
   }
 
-  .bloodSplatter1 {
+  .bloodSplatter1:nth-child(1) {
       position:absolute;
       height:30px;
       width:30px;
@@ -121,13 +121,19 @@ table, th, td {
   }
 
   .bloodSplatter1:nth-child(2) {
-      top:15px;
-      left:20px;
+      top:45px;
+      left:60px;
+      position:absolute;
+      height:30px;
+      width:30px;
   }
 
   .bloodSplatter1:nth-child(3) {
-    top:30px;
-    left:25px;
+    top:70px;
+    left:105px;
+    position:absolute;
+    height:30px;
+    width:30px;
 }
 
   .bloodSplatter2 {
@@ -136,5 +142,5 @@ table, th, td {
       width:80px;
       right:10px;
       bottom:5px;
-
+      border-radius:25%;
   }

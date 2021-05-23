@@ -50,11 +50,16 @@ function createProfile() {
     var $celebBox = $('<div></div>', {class:'celebBox'});
     var $celebHeading = $('<h1></h1>', {class:'celebHeading', text:`Celebrity deaths: ${deathSelectVal.replace('_', ' ')}`});
     var $celebDivider = $('<hr>', {class:'celebDivider'});
-    var $celebInfo = $('<p></p>', {class:'celebInfo', text: `${results}`});
+    var $celebInfo = $('<p></p>', {class:'celebInfo'});
+
+    for(var i=0; i<results.length; i++) {
+        $celebBox.append(results[i]);
+    }
+    
     $('.celebBox').remove();
 
     $body.append($celebBox);
-    $celebBox.append($celebHeading, $celebDivider, $celebInfo);
+    $celebBox.append($celebHeading, $celebDivider);
     $celebBox.hide();
     $celebBox.fadeIn(750);
 }

@@ -50,32 +50,36 @@ $( document ).ready(function() {
                 }
             });
     });
+
+
+
+     function createProfile() {
+          console.log('DEATH NUMBER IS: ', deathNumber);
+          let deathSelectVal = $deathSelect.val().toLowerCase();
+          var $celebBox = $('<div></div>', {class:'celebBox'});
+          var $celebHeading = $('<h1></h1>', {class:'celebHeading', text:`Celebrity deaths: ${deathSelectVal.replace('_', ' ')}`});
+          var $celebDivider = $('<hr>', {class:'celebDivider'});
+          var $celebInfo = $('<p></p>', {class:'celebInfo', text:`${JSON.stringify(listOfDead(results, deathNumber))}`});
+     
+          $('.celebBox').remove();
+     
+          $body.append($celebBox);
+          $celebBox.append($celebHeading, $celebDivider, $celebInfo);
+          $celebBox.hide();
+          $celebBox.fadeIn(750);
+     }
+     
+     function listOfDead (array, deathIdNum) {
+          let newArr = [];
+          for(let i=0; i<array.length; i++) {
+          console.log(array[i]);
+          if(array[i].deathid === deathIdNum) {
+               
+               newArr.push(array[i]);
+          }
+          }
+          return newArr;
+     }
 });
 
-function createProfile() {
-    console.log('DEATH NUMBER IS: ', deathNumber);
-    let deathSelectVal = $deathSelect.val().toLowerCase();
-    var $celebBox = $('<div></div>', {class:'celebBox'});
-    var $celebHeading = $('<h1></h1>', {class:'celebHeading', text:`Celebrity deaths: ${deathSelectVal.replace('_', ' ')}`});
-    var $celebDivider = $('<hr>', {class:'celebDivider'});
-    var $celebInfo = $('<p></p>', {class:'celebInfo', text:`${JSON.stringify(listOfDead(results, deathNumber))}`});
 
-    $('.celebBox').remove();
-
-    $body.append($celebBox);
-    $celebBox.append($celebHeading, $celebDivider, $celebInfo);
-    $celebBox.hide();
-    $celebBox.fadeIn(750);
-}
-
-function listOfDead (array, deathIdNum) {
-    let newArr = [];
-    for(let i=0; i<array.length; i++) {
-        console.log(array[i]);
-        if(array[i].deathid === deathIdNum) {
-            
-            newArr.push(array[i]);
-        }
-    }
-    return newArr;
-}

@@ -62,7 +62,7 @@ $( document ).ready(function() {
                 console.log('This is the celeb OBJECT:', celebObj);
 
                 createProfile();  
-                createTable(results);
+               //  createTable(results);
                });
           });
     });
@@ -76,8 +76,11 @@ $( document ).ready(function() {
 
      $('.celebBox').remove();
 
+
+
      $body.append($celebBox);
      $celebBox.append($celebHeading, $celebDivider, $celebInfo);
+     createTable(results);
      $celebBox.hide();
      $celebBox.fadeIn(750);
 }

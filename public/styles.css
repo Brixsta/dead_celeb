@@ -103,4 +103,5 @@ body {
 table, th, td {
     border: 1px solid black;
     padding:5px;
+    font-family: 'EB Garamond', serif;
   }

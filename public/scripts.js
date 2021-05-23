@@ -153,9 +153,7 @@ function rowAmtToCreate () {
 }
 
 function bloodSplatterEffects () {
-     let randomNumber = Math.floor(Math.random()*4);
-
-     console.log('random number is', randomNumber);
+     
 
 
      console.log('bloodsplatter executed');
@@ -170,6 +168,11 @@ function bloodSplatterEffects () {
 }
 
 function fadeInAndOut () {
+     let randomNumber = Math.floor(Math.random()*4);
+     console.log('random number is', randomNumber);
+
+
+
      setTimeout(function(){
           console.log('5000');
           $('.bloodSplatter1').attr('src', `bloodsplatter${randomNumber}.png`);

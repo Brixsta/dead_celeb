@@ -117,8 +117,8 @@ table, th, td {
     left:105px;
     position:absolute;
     height:50px;
-    width:30px;
-    opacity:.4;
+    width:40px;
+    opacity:.7;
 }
 
   .bloodSplatter2 {
@@ -128,14 +128,14 @@ table, th, td {
       right:-1px;
       bottom:-1px;
       border-radius:45%;
-      opacity:.5;
+      opacity:.7;
   }
 
   .bloodSplatter3 {
     height: 100px;
     width:150px;
     position:absolute;
-    right:200px;
-    top:50px;
+    right:140px;
+    top:5px;
     opacity: .7;
   }

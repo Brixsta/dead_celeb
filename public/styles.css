@@ -125,8 +125,8 @@ table, th, td {
       position:absolute;
       height:60px;
       width:80px;
-      right:100px;
-      bottom:50px;
+      right:40px;
+      bottom:30px;
       border-radius:45%;
       opacity:.8;
   }

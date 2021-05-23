@@ -114,8 +114,8 @@ table, th, td {
 
   .bloodSplatter1 {
       position:absolute;
-      height:200px;
-      width:200px;
+      height:10px;
+      width:140px;
       top:10px;
       left:10px;
   }

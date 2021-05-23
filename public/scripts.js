@@ -4,6 +4,12 @@ var $deathSelect = $('.deathSelect');
 var $body = $('body');
 var results;
 var deathNumber = 0;
+celebObj = {
+     firstName: [],
+     lastName: [],
+     celebId: [],
+     deathId: [],
+}
 
 
 $( document ).ready(function() {
@@ -44,6 +50,15 @@ $( document ).ready(function() {
     //  var results = JSON.parse(data)
                 results = data;
                 console.log('These are the results: ', results);
+
+                for(let i=0; i<results.length; i++) {
+                    celebObj.firstName.push(results[i].firstName);
+                    celebObj.lastName.push(results[i].lastName);
+                    celebObj.celebId.push(results[i].celebId);
+                    celebObj.deathId.push(results[i].deathId);
+                }
+
+                console.log('This is the celeb OBJECT:', celebObj);
 
                 createProfile();  
                 createTable(results);
@@ -89,10 +104,10 @@ function createTable (array) {
      $table.append($firstNameHeading, $lastNameHeading, $celebIdHeading, $deathIdHeading);
      $('.celebBox').append($table);
 
-     for(let i=0; i<array.deathid.length; i++) {
-          var $tableRow = $('<tr></tr>');
-          $('.celebTable').append($tableRow);
-     }
+     // for(let i=0; i<array.deathid.length; i++) {
+     //      var $tableRow = $('<tr></tr>');
+     //      $('.celebTable').append($tableRow);
+     // }
 
      
 }

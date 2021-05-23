@@ -50,7 +50,7 @@ function createProfile() {
     var $celebBox = $('<div></div>', {class:'celebBox'});
     var $celebHeading = $('<h1></h1>', {class:'celebHeading', text:`Celebrity deaths: ${deathSelectVal.replace('_', ' ')}`});
     var $celebDivider = $('<hr>', {class:'celebDivider'});
-    var $celebInfo = $('<p></p>', {class:'celebInfo', text:`${JSON.stringify(results)}`});
+    var $celebInfo = $('<p></p>', {class:'celebInfo', text:`${results}`});
 
     $('.celebBox').remove();
 

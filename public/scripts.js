@@ -89,9 +89,9 @@ function createTable (array) {
      var $lastNameHeading = $('<th></th>', {text:'Last Name'});
      var $celebIdHeading = $('<th></th>', {text:'Celeb Id'});
      var $deathIdHeading = $('<th></th>', {text:'Death Id'});
-     // var tableRowAmt = results.deathid.filter(element => element === deathNumber).length; 
-     rowAmtToCreate();
-     console.log('Object entries deathObj: ', Object.values(deathObj));
+     var tableRowAmt = rowAmtToCreate();
+
+     console.log('Heres the table row Amt', tableRowAmt);
 
 
 

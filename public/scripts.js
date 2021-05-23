@@ -167,26 +167,36 @@ function bloodSplatterEffects () {
      $('.bloodSplatter2').hide();
      $('.bloodSplatter3').hide();
 
-     console.log('its going');
-
-     
-     
-     
-
      setTimeout(function(){
-          alert('1 second');
+          alert('5 second');
           $('.bloodSplatter1').fadeIn();
-     },1000);
+     },5000);
 
      setTimeout(function(){
-          alert('8 seconds');
+          alert('10 seconds');
+          $('.bloodSplatter1').fadeOut();
+     },10000);
+
+     setTimeout(function(){
+          alert('11 seconds');
           $('.bloodSplatter2').fadeIn();
-     },8000)
+     },11000)
 
      setTimeout(function(){
-          alert('12 seconds');
-          return $('.bloodSplatter3').fadeIn();
-     },12000)
+          alert('16 seconds');
+          $('.bloodSplatter2').fadeOut();
+     },16000)
+
+     setTimeout(function(){
+          alert('17 seconds');
+          $('.bloodSplatter3').fadeIn();
+     },17000);
+     setTimeout(function(){
+          alert('22 seconds');
+          $('.bloodSplatter3').fadeOut();
+     },22000);
+
+     bloodSplatterEffects();
 }
      
 

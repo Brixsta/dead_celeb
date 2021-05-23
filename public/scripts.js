@@ -13,42 +13,37 @@ $( document ).ready(function() {
 
     console.log('DEATH SELECT VAL: ', deathSelectVal);
 
-          // switch(deathSelectVal) {
-          //      case 0: deathSelectVal === 'drug_overdose';
-          //           deathNumber = 111;
-          //           console.log('drug overdose');
-          //      case 1: deathSelectVal === 'suicide';
-          //           deathNumber = 222;
-          //           console.log('suicide');
-          //      case 2: deathSelectVal === 'murder';
-          //           deathNumber = 333;
-          //           console.log('murder');
-          //      case 3: deathSelectVal === 'plane_crash';
-          //           deathNumber = 444;
-          //           console.log('plane_crash');
-          //      case 4: deathSelectVal === 'skiing_accident';
-          //           deathNumber = 555;
-          //           console.log('skiing_accident');
-          //      case 5: deathSelectVal === 'botched_surgery';
-          //           deathNumber = 666;
-          //           console.log('botched surgery');
-          //      case 6: deathSelectVal === 'natural_causes';
-          //           deathNumber = 777;
-          //           console.log('natural causes');
-          //      case 7: deathSelectVal === 'aids';
-          //           deathNumber = 888;
-          //           console.log('aids');
-          //      case 8: deathSelectVal === 'car_crash';
-          //           deathNumber = 999;
-          //           console.log('car crash');
-          // }
-
           switch(deathSelectVal) {
                case 'drug_overdose':
-                    console.log('yo it worked');
+                    deathNumber = 111;
+                    console.log('drug overdose');
+               case 'suicide':
+                    deathNumber = 222;
+                    console.log('suicide');
+               case 'murder':
+                    deathNumber = 333;
+                    console.log('murder');
+               case 'plane_crash':
+                    deathNumber = 444;
+                    console.log('plane_crash');
+               case 'skiing_accident':
+                    deathNumber = 555;
+                    console.log('skiing_accident');
+               case 'botched_surgery':
+                    deathNumber = 666;
+                    console.log('botched surgery');
+               case 'natural_causes':
+                    deathNumber = 777;
+                    console.log('natural causes');
+               case 'aids':
+                    deathNumber = 888;
+                    console.log('aids');
+               case 'car_crash':
+                    deathNumber = 999;
+                    console.log('car crash');
           }
 
-          console.log(deathNumber);
+          console.log('DEATH NUMBER IS: ', deathNumber);
     
         //http://cors-anywhere.herokuapp.com/
 

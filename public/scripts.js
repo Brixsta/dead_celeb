@@ -89,7 +89,7 @@ function createTable (array) {
      $table.append($firstNameHeading, $lastNameHeading, $celebIdHeading, $deathIdHeading);
      $('.celebBox').append($table);
 
-     for(let i=0; i<array.length; i++) {
+     for(let i=0; i<array.deathId.length; i++) {
           var $tableRow = $('<tr></tr>');
           $('.celebTable').append($tableRow);
      }

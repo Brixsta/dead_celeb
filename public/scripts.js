@@ -106,13 +106,10 @@ function createTable (array) {
      //      $tableRow[i].append($firstNameCell, $lastNameCell, $celebIdCell, $deathIdCell);
      // }
 
-     var $tableRow = ('.tableRow');
 
-     console.log('What a jquery row looks like ', $('.tableRow'));
-     console.log('what a variable jquery row looks like', $tableRow);
+     console.log('What a jquery row looks like ', $('.tableRow')[0]);
+     console.log(Array.from($('.tableRow')));
 
-     console.log(Array.From($tableRow));
-     console.log(Array.From($('.tableRow')));
 }
 
 function celebToDeathMap (array) {

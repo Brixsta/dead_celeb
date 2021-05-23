@@ -17,6 +17,8 @@ $( document ).ready(function() {
                 results = data;
                 console.log('These are the results: ', results);
 
+                console.log($deathSelect.val());
+
                 switch($deathSelect.val().toLowerCase()) {
                     case 0: $deathSelect.val().toLowerCase() === 'drug_overdose';
                          deathNumber = 111;

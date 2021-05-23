@@ -125,15 +125,15 @@ table, th, td {
       position:absolute;
       height:60px;
       width:80px;
-      right:-1px;
-      bottom:-1px;
+      right:100px;
+      bottom:50px;
       border-radius:45%;
       opacity:.8;
   }
 
   .bloodSplatter3 {
-    height: 90px;
-    width:140px;
+    height: 80px;
+    width:130px;
     position:absolute;
     right:140px;
     top:0px;

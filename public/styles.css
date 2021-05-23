@@ -118,6 +118,7 @@ table, th, td {
     position:absolute;
     height:100px;
     width:100px;
+    background-image:url('bloodsplatter1.png');
 }
 
   .bloodSplatter2 {

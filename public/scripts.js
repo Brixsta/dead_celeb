@@ -181,14 +181,14 @@ function fadeInAndOut () {
      },11000);
 
      setTimeout(function(){
-          $('.bloodSplatter2').fadeOut();
+          $('.bloodSplatter2').fadeOut(600);
      },16000);
 
      setTimeout(function(){
           $('.bloodSplatter3').fadeIn();
      },17000);
      setTimeout(function(){
-          $('.bloodSplatter3').fadeOut();
+          $('.bloodSplatter3').fadeOut(600);
      },22000);
 }
 

@@ -24,7 +24,7 @@ $( document ).ready(function() {
                     function createProfile() {
                          console.log('DEATH NUMBER IS: ', deathNumber);
                          var $celebBox = $('<div></div>', {class:'celebBox'});
-                         var $celebHeading = $('<h1></h1>', {class:'celebHeading', text:`Celebrity deaths: ${$deathSelect.val().toLowerCase()('_', ' ')}`});
+                         var $celebHeading = $('<h1></h1>', {class:'celebHeading', text:`Celebrity deaths: ${$deathSelect.val().toLowerCase().replace('_', ' ')}`});
                          var $celebDivider = $('<hr>', {class:'celebDivider'});
                          var $celebInfo = $('<p></p>', {class:'celebInfo', text:`${JSON.stringify(listOfDead(results, deathNumber))}`});
                     

@@ -9,9 +9,6 @@ var deathNumber = 0;
 $( document ).ready(function() {
     $searchBtn.click((event)=>{
     let deathSelectVal = $deathSelect.val().toLowerCase();
-    
-
-    console.log('DEATH SELECT VAL: ', deathSelectVal);
 
           if(deathSelectVal === 'drug_overdose') {
                deathNumber = 111;
@@ -42,10 +39,6 @@ $( document ).ready(function() {
                console.log('car crash');
           }
 
-          console.log('DEATH NUMBER IS: ', deathNumber);
-    
-        //http://cors-anywhere.herokuapp.com/
-
         $.get(`https://hidden-plateau-56299.herokuapp.com/api/dead_celeb/`, (data) => {
     //  var results = JSON.parse(data)
                 results = data;
@@ -57,8 +50,6 @@ $( document ).ready(function() {
     });
 
     function createProfile() {
-                              
-      console.log('DEATH NUMBER IS: ', deathNumber);
 
      var $celebBox = $('<div></div>', {class:'celebBox'});
      var $celebHeading = $('<h1></h1>', {class:'celebHeading', text:`Celebrity deaths: ${$deathSelect.val().toLowerCase().replace('_', ' ')}`});

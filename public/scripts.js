@@ -66,7 +66,7 @@ function listOfDead (array, deathIdNum) {
         console.log(array[i]);
         if(array[i].deathid === deathIdNum) {
             
-            newArr.push(arr[i]);
+            newArr.push(array[i]);
         }
     }
     return newArr;

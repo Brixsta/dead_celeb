@@ -4,13 +4,7 @@ var $deathSelect = $('.deathSelect');
 var $body = $('body');
 var results;
 var deathNumber = 0;
-var deathStyle = '';
-celebObj = {
-     firstName: [],
-     lastName: [],
-     celebId: [],
-     deathId: [],
-};
+var rowLength = 0;
 
 deathObj = {
      drug_overdose: [],
@@ -51,18 +45,10 @@ $( document ).ready(function() {
           }
 
         $.get(`https://hidden-plateau-56299.herokuapp.com/api/dead_celeb/`, (data) => {
-    //  var results = JSON.parse(data)
                 results = data;
                 console.log('These are the results: ', results);
 
-                for(let i=0; i<results.length; i++) {
-                    celebObj.firstName.push(results[i].firstname);
-                    celebObj.lastName.push(results[i].lastname);
-                    celebObj.celebId.push(results[i].celebid);
-                    celebObj.deathId.push(results[i].deathid);
-                }
                 celebToDeathMap(results);
-
                 createProfile();  
                 createTable(results);
                });
@@ -104,7 +90,7 @@ function createTable (array) {
      var $celebIdHeading = $('<th></th>', {text:'Celeb Id'});
      var $deathIdHeading = $('<th></th>', {text:'Death Id'});
      // var tableRowAmt = results.deathid.filter(element => element === deathNumber).length; 
-     
+     rowAmtToCreate();
      console.log('Object entries deathObj: ', Object.values(deathObj));
 
 
@@ -141,8 +127,23 @@ function celebToDeathMap (array) {
                deathObj.car_crash.push(array[i]);
           }
      }
+}
 
-     console.log('HERES THE DEATH OBJ AFTER MAPPING: ', deathObj);
+function rowAmtToCreate () {
+     let newArr = [];
+     let rowAmt = 0;
+
+     for(let i=0; i<results.length; i++) {
+          if(results[i].deathid === deathNumber) {
+               newArr.push(results[i]);
+          }
+      }
+
+      rowAmt = newArr.length;
+
+      console.log('The amount of rows is :', rowAmt);
+
+      return rowAmt;
 }
      
 

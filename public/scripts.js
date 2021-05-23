@@ -52,10 +52,10 @@ $( document ).ready(function() {
                 console.log('These are the results: ', results);
 
                 for(let i=0; i<results.length; i++) {
-                    celebObj.firstName.push(results[i].firstName);
-                    celebObj.lastName.push(results[i].lastName);
-                    celebObj.celebId.push(results[i].celebId);
-                    celebObj.deathId.push(results[i].deathId);
+                    celebObj.firstName.push(results[i].firstname);
+                    celebObj.lastName.push(results[i].lastname);
+                    celebObj.celebId.push(results[i].celebid);
+                    celebObj.deathId.push(results[i].deathid);
                 }
 
                 console.log('This is the celeb OBJECT:', celebObj);

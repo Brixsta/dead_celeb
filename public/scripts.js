@@ -4,6 +4,7 @@ var $deathSelect = $('.deathSelect');
 var $body = $('body');
 var results;
 var deathNumber = 0;
+var deathSelectVal = '';
 
 deathObj = {
      drug_overdose: [],
@@ -21,7 +22,7 @@ deathObj = {
 $( document ).ready(function() {
     $searchBtn.click((event)=>{
      
-    let deathSelectVal = $deathSelect.val().toLowerCase();
+     deathSelectVal = $deathSelect.val().toLowerCase();
 
           if(deathSelectVal === 'drug_overdose') {
                deathNumber = 111;
@@ -99,7 +100,8 @@ function createTable (array) {
      for(let i=0; i< tableRowAmt; i++) {
           var tableRow = ('.tableRow');
           var firstNameCell = document.createElement('td');
-          firstNameCell.textContent = deathObj.$deathSelect.val()[i];
+          console.log('deathselectVal is:', $deathSelect.val());
+          // firstNameCell.textContent = deathObj.$deathSelect.val()[i];
           var lastNameCell = document.createElement('td');
           var celebIdCell = document.createElement('td');
           var deathIdCell = document.createElement('td');

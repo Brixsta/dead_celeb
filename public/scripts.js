@@ -7,7 +7,7 @@ var results;
 $( document ).ready(function() {
     $searchBtn.click((event)=>{
     let deathSelectVal = $deathSelect.val().toLowerCase();
-    let deathNumber;
+    var deathNumber;
 
         //http://cors-anywhere.herokuapp.com/
 

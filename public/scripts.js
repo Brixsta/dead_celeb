@@ -63,7 +63,7 @@ function createProfile() {
 function listOfDead (array, deathIdNum) {
     let newArr = [];
     for(let i=0; i<array.length; i++) {
-        console.log(arr[i]);
+        console.log(array[i]);
         if(array[i].deathid === deathIdNum) {
             
             newArr.push(arr[i]);

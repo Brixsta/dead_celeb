@@ -96,18 +96,20 @@ function createTable (array) {
           $('.celebTable').append($tableRow);
      }   
 
-     // for(let i=0; i< tableRowAmt; i++) {
-     //      var $tableRow = ('.tableRow');
-     //      var $firstNameCell = $('<td></td>', {text:'text' + i.toString()});
-     //      var $lastNameCell = $('<td></td>', {text:'text' + i.toString()});
-     //      var $celebIdCell = $('<td></td>', {text:'text' + i.toString()});
-     //      var $deathIdCell = $('<td></td>', {text:'text' + i.toString()});
+     for(let i=0; i< tableRowAmt; i++) {
+          var $tableRow = ('.tableRow');
+          var $firstNameCell = $('<td></td>', {text:'text' + i.toString()});
+          var $lastNameCell = $('<td></td>', {text:'text' + i.toString()});
+          var $celebIdCell = $('<td></td>', {text:'text' + i.toString()});
+          var $deathIdCell = $('<td></td>', {text:'text' + i.toString()});
 
-     //      $tableRow[i].append($firstNameCell, $lastNameCell, $celebIdCell, $deathIdCell);
-     // }
+          console.log('What a jquery row looks like ', $('.tableRow')[i]);
+
+          // $tableRow[i].append($firstNameCell, $lastNameCell, $celebIdCell, $deathIdCell);
+     }
 
 
-     console.log('What a jquery row looks like ', $('.tableRow')[0]);
+     
      console.log(Array.from($('.tableRow')));
 
 }

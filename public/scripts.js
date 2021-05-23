@@ -169,20 +169,23 @@ function bloodSplatterEffects () {
 
      console.log('its going');
 
-     $('.bloodSplatter1').fadeIn(700);
-     $('.bloodSplatter2').fadeIn(1400);
-     $('.bloodSplatter3').fadeIn(1400);
+     
+     
+     
 
      setTimeout(function(){
           alert('1 second');
+          $('.bloodSplatter1').fadeIn();
      },1000);
 
      setTimeout(function(){
-          
+          alert('8 seconds');
+          $('.bloodSplatter2').fadeIn();
      },8000)
 
      setTimeout(function(){
-          
+          alert('12 seconds');
+          return $('.bloodSplatter3').fadeIn();
      },12000)
 }
      

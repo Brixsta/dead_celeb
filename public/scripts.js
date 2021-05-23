@@ -107,9 +107,8 @@ function createTable (array) {
 
      console.log('heres the values of results.deathid: ',Object.values(results.deathid));
      
-     console.log('here are the results.deathid: ', results.deathid)
-     console.log('here is the death number: ', deathNumber);
-     // console.log('This is the table row amt: ', tableRowAmt);
+     console.log('Object entries deathObj: ', Object.entries(deathObj));
+
 
 
      $celebTable.append($firstNameHeading, $lastNameHeading, $celebIdHeading, $deathIdHeading);

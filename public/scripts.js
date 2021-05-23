@@ -3,11 +3,12 @@ var $searchBtn = $('.searchBtn');
 var $deathSelect = $('.deathSelect');
 var $body = $('body');
 var results;
+var deathNumber;
 
 $( document ).ready(function() {
     $searchBtn.click((event)=>{
     let deathSelectVal = $deathSelect.val().toLowerCase();
-    var deathNumber = 0;
+    
 
         //http://cors-anywhere.herokuapp.com/
 

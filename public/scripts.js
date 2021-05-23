@@ -21,9 +21,14 @@ deathObj = {
 
 $( document ).ready(function() {
     $searchBtn.click((event)=>{
-     var $bloodSplatter1 = $('.bloodSplatter1');
-     var $bloodSplatter2 = $('.bloodSplatter2');
-     var $bloodSplatter1 = $('.bloodSplatter3');
+     // var $bloodSplatter1 = $('.bloodSplatter1');
+     // var $bloodSplatter2 = $('.bloodSplatter2');
+     // var $bloodSplatter1 = $('.bloodSplatter3');
+
+     
+     // console.log($bloodSplatter1);
+     // console.log($bloodSplatter2);
+     // console.log($bloodSplatter3);
 
      bloodSplatterEffects();
      
@@ -157,9 +162,9 @@ function rowAmtToCreate () {
 }
 
 function bloodSplatterEffects () {
-     $bloodSplatter1.hide();
-     $bloodSplatter2.hide();
-     $bloodSplatter3.hide();
+     $('.bloodSplatter1').hide();
+     $('.bloodSplatter2').hide();
+     $('.bloodSplatter3').hide();
 }
      
 

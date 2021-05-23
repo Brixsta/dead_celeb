@@ -50,7 +50,7 @@ function createProfile() {
     var $celebBox = $('<div></div>', {class:'celebBox'});
     var $celebHeading = $('<h1></h1>', {class:'celebHeading', text:`Celebrity deaths: ${deathSelectVal.replace('_', ' ')}`});
     var $celebDivider = $('<hr>', {class:'celebDivider'});
-    var $celebInfo = $('<p></p>', {class:'celebInfo', text:`${JSON.stringify(results)}`});
+    var $celebInfo = $('<p></p>', {class:'celebInfo', text:`${JSON.stringify(listOfDead(results, 222))}`});
 
     $('.celebBox').remove();
 
@@ -58,4 +58,14 @@ function createProfile() {
     $celebBox.append($celebHeading, $celebDivider, $celebInfo);
     $celebBox.hide();
     $celebBox.fadeIn(750);
+}
+
+function listOfDead (array, deathIdNum) {
+    let newArr = [];
+    for(let i=0; i<array.length; i++) {
+        if(array[i].deathId === deathIdNum) {
+            newArr.push(arr[i]);
+        }
+    }
+    return newArr;
 }

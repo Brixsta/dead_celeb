@@ -3,7 +3,7 @@ var $searchBtn = $('.searchBtn');
 var $deathSelect = $('.deathSelect');
 var $body = $('body');
 var results;
-var deathNumber;
+var deathNumber = 0;
 
 $( document ).ready(function() {
     $searchBtn.click((event)=>{

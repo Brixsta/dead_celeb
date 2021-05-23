@@ -46,6 +46,7 @@ $( document ).ready(function() {
                 console.log('These are the results: ', results);
 
                 createProfile();  
+                createTable(results);
                });
           });
     });
@@ -76,7 +77,18 @@ function listOfDead (array, deathIdNum) {
      return newArr;
 }
 
+function createTable (array) {
+     console.log('Table has been created!');
 
+     var $table = $('<table></table');
+     var $firstNameHeading = $('<th></th>', {text:'First Name'});
+     var $lastNameHeading = $('<th></th>', {text:'Last Name'});
+     var $celebIdHeading = $('<th></th>', {text:'Celeb Id'});
+     var $deathIdHeading = $('<th></th>', {text:'Death Id'});
+
+     $table.append($firstNameHeading, $lastNameHeading, $celebIdHeading, $deathIdHeading);
+     $('.celebBox').append($table);
+}
      
 
 

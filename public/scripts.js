@@ -65,7 +65,7 @@ $( document ).ready(function() {
      $('.celebBox').remove();
 
      $body.append($celebBox);
-     $celebBox.append($celebHeading, $celebDivider, $celebInfo);
+     $celebBox.append($celebHeading, $celebDivider);
      $celebBox.hide();
      $celebBox.fadeIn(750);
 }

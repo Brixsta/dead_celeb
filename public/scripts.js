@@ -62,7 +62,7 @@ $( document ).ready(function() {
      var $celebInfo = $('<p></p>', {class:'celebInfo', text:`${JSON.stringify(listOfDead(results, deathNumber))}`});
 
      $('.celebBox').remove();
-     
+
      $body.append($celebBox);
      $celebBox.append($celebHeading, $celebDivider, $celebInfo);
      $celebBox.hide();
@@ -94,6 +94,8 @@ function createTable (array) {
      for(let i=0; i<tableRowAmt; i++) {
           var $tableRow = $('<tr></tr>', {class:'tableRow'});
           $('.celebTable').append($tableRow);
+          var $tableCell = $('<td></td>', {text:'text'});
+          $('.tableRow').append($tableCell);
      }   
 }
 

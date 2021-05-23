@@ -94,7 +94,7 @@ function createTable (array) {
      for(let i=0; i<tableRowAmt; i++) {
           var $tableRow = $('<tr></tr>', {class:'tableRow'});
           $('.celebTable').append($tableRow);
-          var $tableCell = $('<td></td>', {text:'text'});
+          var $tableCell = $('<td></td>', {text:'text' + i.toString()});
           $('.tableRow').append($tableCell);
      }   
 }

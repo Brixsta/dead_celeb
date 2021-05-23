@@ -125,9 +125,9 @@ table, th, td {
       height:60px;
       width:80px;
       right:50px;
-      bottom:10px;
+      bottom:0px;
       border-radius:45%;
-      opacity:.8;
+      opacity:.6;
   }
 
   .bloodSplatter3 {

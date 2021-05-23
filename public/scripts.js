@@ -101,19 +101,17 @@ function createTable (array) {
           var tableRow = ('.tableRow');
           var firstNameCell = document.createElement('td');
           console.log('deathselectVal is:', deathSelectVal);
-          firstNameCell.textContent = deathObj.deathSelectVal;
+
+          console.log(Array.from(deathObj.deathSelectVal));
+          // firstNameCell.textContent = Array.from(deathObj.deathSelectVal)[i];
+
+          
           var lastNameCell = document.createElement('td');
           var celebIdCell = document.createElement('td');
           var deathIdCell = document.createElement('td');
 
-          console.log('What a jquery row looks like ', $('.tableRow')[i]);
-
          $('.tableRow')[i].append(firstNameCell, lastNameCell, celebIdCell, deathIdCell);
      }
-
-
-     
-     console.log(Array.from($('.tableRow')));
 
 }
 

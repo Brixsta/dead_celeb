@@ -102,6 +102,7 @@ function createTable (array) {
      let tableRowAmt = celebObj.deathId.filter(element => element === deathNumber).length; 
 
      $('.celebTable').remove();
+     $('.tableRow').remove();
 
      $celebTable.append($firstNameHeading, $lastNameHeading, $celebIdHeading, $deathIdHeading);
      $('.celebBox').append($celebTable);
@@ -109,7 +110,7 @@ function createTable (array) {
      console.log('Here is the number before the table', tableRowAmt);
 
      for(let i=0; i<tableRowAmt; i++) {
-          var $tableRow = $('<tr></tr>');
+          var $tableRow = $('<tr></tr>', {class:'tableRow'});
           $('.celebTable').append($tableRow);
      }
 

@@ -21,6 +21,11 @@ deathObj = {
 
 $( document ).ready(function() {
     $searchBtn.click((event)=>{
+     var $bloodSplatter1 = $('.bloodSplatter1');
+     var $bloodSplatter2 = $('.bloodSplatter2');
+     var $bloodSplatter1 = $('.bloodSplatter3');
+
+     bloodSplatterEffects();
      
      deathSelectVal = $deathSelect.val().toLowerCase();
 
@@ -149,6 +154,12 @@ function rowAmtToCreate () {
 
       rowAmt = newArr.length;
       return rowAmt;
+}
+
+function bloodSplatterEffects () {
+     $bloodSplatter1.hide();
+     $bloodSplatter2.hide();
+     $bloodSplatter3.hide();
 }
      
 

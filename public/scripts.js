@@ -102,7 +102,7 @@ function createTable (array) {
           var firstNameCell = document.createElement('td');
           console.log('deathselectVal is:', deathSelectVal);
 
-          console.log('this is it', deathObj.drug_overdose);
+          console.log('this is it', deathObj.deathSelectVal);
           // firstNameCell.textContent = Array.from(deathObj.deathSelectVal)[i];
 
           

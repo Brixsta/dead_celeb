@@ -100,19 +100,13 @@ function createTable (array) {
      for(let i=0; i< tableRowAmt; i++) {
           var tableRow = ('.tableRow');
           var firstNameCell = document.createElement('td');
-
           firstNameCell.textContent = deathObj[deathSelectVal][i].firstname;
-          console.log('deathselectVal is:', deathSelectVal);
-          console.log('see whats up', deathSelectVal === 'drug_overdose');
-
-          console.log(typeof deathSelectVal);
-          // console.log('this is it', deathObj.$deathSelect.val().toLowerCase);
-          // firstNameCell.textContent = Array.from(deathObj.deathSelectVal)[i];
-
-          
           var lastNameCell = document.createElement('td');
+          lastNameCell.textContent = deathObj[deathSelectVal][i].lastname;
           var celebIdCell = document.createElement('td');
+          celebIdCell.textContent = deathObj[deathSelectVal][i].celebid;
           var deathIdCell = document.createElement('td');
+          deathIdCell.textContent = deathObj[deathSelectVal][i].deathid;
 
          $('.tableRow')[i].append(firstNameCell, lastNameCell, celebIdCell, deathIdCell);
      }

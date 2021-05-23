@@ -60,7 +60,7 @@ $( document ).ready(function() {
      var $celebBox = $('<div></div>', {class:'celebBox'});
      var $celebHeading = $('<h1></h1>', {class:'celebHeading', text:`Celebrity deaths: ${$deathSelect.val().toLowerCase().replace('_', ' ')}`});
      var $celebDivider = $('<hr>', {class:'celebDivider'});
-     var $celebInfo = $('<p></p>', {class:'celebInfo', text:`${JSON.stringify(listOfDead(results, deathNumber))}`});
+     // var $celebInfo = $('<p></p>', {class:'celebInfo', text:`${JSON.stringify(listOfDead(results, deathNumber))}`});
 
      $('.celebBox').remove();
 
@@ -135,8 +135,6 @@ function celebToDeathMap (array) {
                deathObj.car_crash.push(array[i]);
           }
      }
-
-     console.log('deathObj is: ',deathObj);
 }
 
 function rowAmtToCreate () {
@@ -150,9 +148,6 @@ function rowAmtToCreate () {
       }
 
       rowAmt = newArr.length;
-
-      console.log('The amount of rows is :', rowAmt);
-
       return rowAmt;
 }
      

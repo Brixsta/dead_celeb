@@ -10,7 +10,19 @@ celebObj = {
      lastName: [],
      celebId: [],
      deathId: [],
-}
+};
+
+deathObj = {
+     drug_overdose: [],
+     suicide: [],
+     murder: [],
+     plane_crash: [],
+     skiing_accident: [],
+     botched_surgery: [],
+     natural_causes: [],
+     aids: [],
+     car_crash: []
+};
 
 
 $( document ).ready(function() {
@@ -58,11 +70,11 @@ $( document ).ready(function() {
                     celebObj.celebId.push(results[i].celebid);
                     celebObj.deathId.push(results[i].deathid);
                 }
-
+                celebToDeathMap(results);
                 console.log('This is the celeb OBJECT:', celebObj);
 
                 createProfile();  
-               //  createTable(results);
+                createTable(results);
                });
           });
     });
@@ -80,7 +92,6 @@ $( document ).ready(function() {
 
      $body.append($celebBox);
      $celebBox.append($celebHeading, $celebDivider, $celebInfo);
-     createTable(results);
      $celebBox.hide();
      $celebBox.fadeIn(750);
 }
@@ -118,9 +129,33 @@ function createTable (array) {
      for(let i=0; i<tableRowAmt; i++) {
           var $tableRow = $('<tr></tr>', {class:'tableRow'});
           $('.celebTable').append($tableRow);
+     }   
+}
+
+function celebToDeathMap (array) {
+     for(let i=0; i<array.length; i++) {
+          if(array[i].deathid === 111) {
+               deathObj.drug_overdose.push(array[i]);
+          } else if(array[i].deathid === 222) {
+               deathObj.suicide.push(array[i]);
+          } else if (array[i].deathid === 333) {
+               deathObj.murder.push(array[i]);
+          } else if (array[i].deathid === 444) {
+               deathObj.plane_crash.push(array[i]);
+          } else if (array[i].deathid === 555) {
+               deathObj.skiing_accident.push(array[i]);
+          } else if (array[i].deathid === 666) {
+               deathObj.botched_surgery.push(array[i]);
+          } else if (array[i].deathid === 777) {
+               deathObj.natural_causes.push(array[i]);
+          } else if (array[i].deathid === 888) {
+               deathObj.aids.push(array[i]);
+          } else if (array[i].deathid === 999) {
+               deathObj.car_crash.push(array[i]);
+          }
      }
 
-     
+     console.log('HERES THE DEATH OBJ AFTER MAPPING: ', deathObj);
 }
      
 

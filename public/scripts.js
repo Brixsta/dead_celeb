@@ -106,7 +106,7 @@ function createTable (array) {
           console.log('see whats up', deathSelectVal === 'drug_overdose');
 
           console.log(typeof deathSelectVal);
-          console.log('this is it', deathObj.$deathSelect.val().toLowerCase);
+          // console.log('this is it', deathObj.$deathSelect.val().toLowerCase);
           // firstNameCell.textContent = Array.from(deathObj.deathSelectVal)[i];
 
           

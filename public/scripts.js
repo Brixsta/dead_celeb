@@ -101,7 +101,7 @@ function createTable (array) {
           var tableRow = ('.tableRow');
           var firstNameCell = document.createElement('td');
           console.log('deathselectVal is:', deathSelectVal);
-          // firstNameCell.textContent = deathObj.$deathSelect.val()[i];
+          firstNameCell.textContent = deathObj.deathSelectVal[i];
           var lastNameCell = document.createElement('td');
           var celebIdCell = document.createElement('td');
           var deathIdCell = document.createElement('td');
@@ -139,6 +139,8 @@ function celebToDeathMap (array) {
                deathObj.car_crash.push(array[i]);
           }
      }
+
+     console.log('deathObj is: ',deathObj);
 }
 
 function rowAmtToCreate () {

@@ -94,15 +94,16 @@ function createTable (array) {
      for(let i=0; i<tableRowAmt; i++) {
           var $tableRow = $('<tr></tr>', {class:'tableRow'});
           $('.celebTable').append($tableRow);
-
-          var $tableCell = $('<td></td>', {text:'text' + i.toString()});
-          $('.tableRow').append($tableCell, $tableCell, $tableCell, $tableCell);
      }   
 
-//      for(let i=0; i< tableRowAmt * 4; i++) {
-//           var $tableCell = $('<td></td>', {text:'text' + i.toString()});
-//           $('.tableRow').append($tableCell);
-//      }
+     for(let i=0; i< tableRowAmt; i++) {
+          var $firstNameCell = $('<td></td>', {text:'text' + i.toString()});
+          var $lastNameCell = $('<td></td>', {text:'text' + i.toString()});
+          var $celebIdCell = $('<td></td>', {text:'text' + i.toString()});
+          var $deathIdCell = $('<td></td>', {text:'text' + i.toString()});
+
+          $('.tableRow')[i].append($firstNameCell, $lastNameCell, $celebIdCell, $deathIdCell);
+     }
 }
 
 function celebToDeathMap (array) {

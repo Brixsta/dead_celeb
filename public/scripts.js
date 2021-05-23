@@ -100,6 +100,8 @@ function createTable (array) {
      for(let i=0; i< tableRowAmt; i++) {
           var tableRow = ('.tableRow');
           var firstNameCell = document.createElement('td');
+
+          firstNameCell.textContent = deathObj.drug_overdose[i].firstname;
           console.log('deathselectVal is:', deathSelectVal);
           console.log('see whats up', deathSelectVal === 'drug_overdose');
 

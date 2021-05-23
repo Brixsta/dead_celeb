@@ -14,34 +14,63 @@ $( document ).ready(function() {
     console.log('DEATH SELECT VAL: ', deathSelectVal);
 
           switch(deathSelectVal) {
-               case 'drug_overdose':
+               case drug_overdose:
                     deathNumber = 111;
                     console.log('drug overdose');
-               case 'suicide':
+               case suicide:
                     deathNumber = 222;
                     console.log('suicide');
-               case 'murder':
+               case murder:
                     deathNumber = 333;
                     console.log('murder');
-               case 'plane_crash':
+               case plane_crash:
                     deathNumber = 444;
                     console.log('plane_crash');
-               case 'skiing_accident':
+               case skiing_accident:
                     deathNumber = 555;
                     console.log('skiing_accident');
-               case 'botched_surgery':
+               case botched_surgery:
                     deathNumber = 666;
                     console.log('botched surgery');
-               case 'natural_causes':
+               case natural_causes:
                     deathNumber = 777;
                     console.log('natural causes');
-               case 'aids':
+               case aids:
                     deathNumber = 888;
                     console.log('aids');
-               case 'car_crash':
+               case car_crash:
                     deathNumber = 999;
                     console.log('car crash');
           }
+
+          // if(deathSelectVal === 'drug_overdose') {
+          //      deathNumber = 111;
+          //      console.log('drug_overdose');
+          // } else if (deathSelectVal === 'suicide') {
+          //      deathNumber = 222;
+          //      console.log('suicide');
+          // } else if (deathSelectVal === 'murder') {
+          //      deathNumber = 333;
+          //      console.log('murder');
+          // } else if (deathSelectVal === 'plane_crash') {
+          //      deathNumber = 444;
+          //      console.log('plane_crash');
+          // } else if (deathSelectVal === 'skiing_accident') {
+          //      deathNumber = 555;
+          //      console.log('skiing_accident');
+          // } else if (deathSelectVal === 'botched_surgery') {
+          //      deathNumber = 666;
+          //      console.log('botched_surgery');
+          // } else if (deathSelectVal === 'natural_causes') {
+          //      deathNumber = 777;
+          //      console.log('natural_causes');
+          // } else if(deathSelectVal === 'aids') {
+          //      deathNumber = 888;
+          //      console.log('aids');
+          // } else if (deathSelectVal === 'car_crash') {
+          //      deathNumber = 999;
+          //      console.log('car crash');
+          // }
 
           console.log('DEATH NUMBER IS: ', deathNumber);
     

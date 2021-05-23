@@ -105,7 +105,7 @@ function createTable (array) {
 
           console.log('What a jquery row looks like ', $('.tableRow')[i]);
 
-          // $tableRow[i].append($firstNameCell, $lastNameCell, $celebIdCell, $deathIdCell);
+         $('.tableRow')[i].append($firstNameCell, $lastNameCell, $celebIdCell, $deathIdCell);
      }
 
 

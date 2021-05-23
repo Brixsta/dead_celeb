@@ -168,6 +168,7 @@ function bloodSplatterEffects () {
 function fadeInAndOut () {
      setTimeout(function(){
           console.log('5000');
+          $('.bloodSplatter1').attr('src', 'bloodsplatter2.png');
           $('.bloodSplatter1').fadeIn();
      },5000);
 

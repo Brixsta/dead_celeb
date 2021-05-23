@@ -97,5 +97,9 @@ body {
 
 .celebTable {
     margin:auto;
-    border:solid 1px black;
+    border-collapse:collapse;
 }
+
+table, th, td {
+    border: 1px solid black;
+  }

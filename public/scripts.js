@@ -104,10 +104,9 @@ function createTable (array) {
      var $celebIdHeading = $('<th></th>', {text:'Celeb Id'});
      var $deathIdHeading = $('<th></th>', {text:'Death Id'});
      // var tableRowAmt = results.deathid.filter(element => element === deathNumber).length; 
-
-     console.log('heres the values of results.deathid: ',Object.values(results.deathid));
      
      console.log('Object entries deathObj: ', Object.entries(deathObj));
+
 
 
 

@@ -23,6 +23,7 @@ body {
     border:solid 1px rgba(0, 0, 0, 0.64);
     box-sizing:border-box;
     margin-top:20px;
+    box-shadow:0px 0px 8px rgba(0,0,0,.9);
 }
 
 .container h1 {
@@ -31,6 +32,7 @@ body {
     padding:0px;
     font-family: 'EB Garamond', serif;
     text-shadow:0px 0px 3px rgba(0,0,0,.2);
+    position:relative;
 }
 
 .deathSelect {
@@ -78,6 +80,7 @@ body {
     margin:auto;
     margin-top:20px;
     padding:15px 20px;
+    box-shadow:0px 0px 8px rgba(0,0,0,.9);
 }
 
 .celebHeading {
@@ -91,9 +94,6 @@ body {
     width:70%;
 }
 
-.celebInfo {
-    
-}
 
 .celebTable {
     margin:auto;
@@ -108,6 +108,14 @@ table, th, td {
   }
 
   th {
-      background-color:rgb(28, 28, 28);
+      background-color: black;
       color:white;
+  }
+
+  .bloodSplatter1 {
+      position:absolute;
+      height:200px;
+      width:200px;
+      top:10px;
+      left:10px;
   }

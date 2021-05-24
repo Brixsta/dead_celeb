@@ -12,7 +12,7 @@ body {
 
 
 .container {
-    height:160px;
+    height:100%;
     width:500px;
     background-color:rgb(30, 30, 30);
     margin:auto;

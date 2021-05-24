@@ -164,7 +164,6 @@ function fadeInAndOut () {
      },2000);
 
      setTimeout(function(){
-          randomNumber = Math.floor(Math.random()*4);
           bloodSplatterFadeOut();
      },7000);
 

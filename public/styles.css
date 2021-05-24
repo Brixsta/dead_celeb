@@ -175,3 +175,12 @@ table, th, td {
       top:0px;
       opacity:.7;
   }
+
+  .bloodSplatter4 {
+    height: 80px;
+    width:100px;
+    position:absolute;
+    left:30px;
+    top:20px;
+    opacity:.7;
+}

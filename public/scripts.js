@@ -160,7 +160,7 @@ function bloodSplatterEffects () {
      fadeInAndOut();
      setTimeout(function(){
      bloodSplatterEffects();
-     },24500);
+     },26500);
 }
 
 function fadeInAndOut () {
@@ -202,6 +202,14 @@ function fadeInAndOut () {
      setTimeout(function(){
           bloodSplatterFadeOut();
      },23000);
+     setTimeout(function(){
+          randomNumber = Math.floor(Math.random()*4);
+          $('.bloodSplatter4').attr('src', `bloodsplatter${randomNumber}.png`);
+          $('.bloodSplatter4').fadeIn(600);
+     },25000);
+     setTimeout(function(){
+          bloodSplatterFadeOut();
+     },28000);
 }
 
 function bloodSplatterFadeOut() {
@@ -209,6 +217,7 @@ function bloodSplatterFadeOut() {
      $('.bloodSplatter1').fadeOut(800);
      $('.bloodSplatter2').fadeOut(800);
      $('.bloodSplatter3').fadeOut(800);
+     $('.bloodSplatter4').fadeOut(800);
 }
 
 

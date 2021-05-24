@@ -112,7 +112,7 @@ body {
     flex-direction:row;
     align-items:center;
     justify-content:center;
-    margin-top:10px;
+    margin-top:15px;
 }
 
 .firstNameInputBox, .lastNameInputBox {

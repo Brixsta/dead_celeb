@@ -170,7 +170,7 @@ function bloodSplatterEffects () {
      fadeInAndOut();
      setTimeout(function(){
           bloodSplatterEffects();
-     },29000);
+     },27000);
 }
 
 function fadeInAndOut () {
@@ -179,62 +179,51 @@ function fadeInAndOut () {
 
      setTimeout(function(){
           randomNumber = Math.floor(Math.random()*4);
-          console.log('random number is:', randomNumber);
-          console.log('5000');
           $('.bloodSplatter1').attr('src', `bloodsplatter${randomNumber}.png`);
           $('.bloodSplatter1').fadeIn(800);
-     },5000);
+     },2000);
 
      setTimeout(function(){
           randomNumber = Math.floor(Math.random()*4);
-          console.log('10000');
-          $('.bloodSplatter0').fadeOut(800);
-          $('.bloodSplatter1').fadeOut(800);
-          $('.bloodSplatter2').fadeOut(800);
-          $('.bloodSplatter3').fadeOut(800);
-     },10000);
+          bloodSplatterFadeOut();
+     },7000);
 
      setTimeout(function(){
           randomNumber = Math.floor(Math.random()*4);
           console.log('11000');
           $('.bloodSplatter2').attr('src', `bloodsplatter${randomNumber}.png`);
           $('.bloodSplatter2').fadeIn(800);
-     },11000);
+     },8000);
 
      setTimeout(function(){
-          console.log('16000');
-          $('.bloodSplatter0').fadeOut(800);
-          $('.bloodSplatter1').fadeOut(800);
-          $('.bloodSplatter2').fadeOut(800);
-          $('.bloodSplatter3').fadeOut(800);
-     },16000);
+          bloodSplatterFadeOut();
+     },13000);
 
      setTimeout(function(){
           randomNumber = Math.floor(Math.random()*4);
           console.log('17000');
           $('.bloodSplatter3').attr('src', `bloodsplatter${randomNumber}.png`);
           $('.bloodSplatter3').fadeIn(800);
-     },17000);
+     },14000);
      setTimeout(function(){
-          console.log('22000');
-          $('.bloodSplatter0').fadeOut(800);
-          $('.bloodSplatter1').fadeOut(800);
-          $('.bloodSplatter2').fadeOut(800);
-          $('.bloodSplatter3').fadeOut(800);
-     },22000);
+          bloodSplatterFadeOut();
+     },19000);
      setTimeout(function(){
           randomNumber = Math.floor(Math.random()*4);
           console.log('23000');
           $('.bloodSplatter0').attr('src', `bloodsplatter${randomNumber}.png`);
           $('.bloodSplatter0').fadeIn(600);
-     },23000);
+     },20000);
      setTimeout(function(){
-          console.log('28000');
-          $('.bloodSplatter0').fadeOut(800);
-          $('.bloodSplatter1').fadeOut(800);
-          $('.bloodSplatter2').fadeOut(800);
-          $('.bloodSplatter3').fadeOut(800);
-     },28000);
+          bloodSplatterFadeOut();
+     },25000);
+}
+
+function bloodSplatterFadeOut() {
+     $('.bloodSplatter0').fadeOut(800);
+     $('.bloodSplatter1').fadeOut(800);
+     $('.bloodSplatter2').fadeOut(800);
+     $('.bloodSplatter3').fadeOut(800);
 }
 
 

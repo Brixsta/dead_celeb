@@ -110,12 +110,12 @@ table, th, td {
 
   th {
       background-color:rgb(137, 0, 0);
-      color:whitesmoke;
+      color:rgb(235, 235, 235);
   }
 
   td {
-    color:rgb(235, 235, 235);
-      color:black;
+    background-color:rgb(235, 235, 235);
+    color:black;
   }
 
   .bloodSplatter1 {

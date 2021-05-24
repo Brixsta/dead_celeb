@@ -212,7 +212,7 @@ function fadeInAndOut () {
      },20000);
      setTimeout(function(){
           bloodSplatterFadeOut();
-     },24000);
+     },23000);
 }
 
 function bloodSplatterFadeOut() {

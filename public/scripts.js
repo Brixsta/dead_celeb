@@ -23,7 +23,7 @@ bloodSplatterEffects();
 $( document ).ready(function() {
     $searchBtn.click((event)=>{
      var graveyardMusic = new Audio ('graveyard.mp3');
-     var musicOn;
+     var musicOn = false;
 
      if(musicOn === false) {
           console.log('music is now on');

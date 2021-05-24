@@ -107,14 +107,20 @@ body {
 
 .firstNameInputBox, .lastNameInputBox {
     background-color:green;
-    height:50px;
-    width:80%;
+    height:30px;
+    width:200px;
     display:flex;
     flex-direction:row;
     justify-content:space-around;
     border:solid 2px black;
     margin:0px 10px;
 }
+
+.fistNameInput, lastNameInput {
+    padding:5px;
+}
+
+
 .celebBox {
     height:100%;
     width:500px;

@@ -14,7 +14,7 @@ body {
 .container {
     height:160px;
     width:500px;
-    background-color:rgb(15, 15, 15);
+    background-color:rgb(25, 25, 25);
     margin:auto;
     display:flex;
     justify-content:center;
@@ -74,7 +74,7 @@ body {
 .celebBox {
     height:100%;
     width:500px;
-    background-color:rgb(15, 15, 15);
+    background-color:rgb(25, 25, 25);
     border-radius:5px;
     margin:auto;
     margin-top:20px;

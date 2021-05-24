@@ -29,18 +29,8 @@ $( document ).ready(function() {
           console.log('music is now on');
           graveyardMusic.play();
           musicOn = true;
-          setTimeout(function(){musicOn = false;
-          console.log('status of musicOn var:', musicOn)},10000);
           setTimeout(function(){musicOn = false},390000);
      }
-
-     
-     
-
-     
-
-
-
 
      deathSelectVal = $deathSelect.val().toLowerCase();
 

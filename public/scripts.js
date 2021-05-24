@@ -18,8 +18,6 @@ deathObj = {
      car_crash: []
 };
 
-bloodSplatterEffects();
-
 $( document ).ready(function() {
     $searchBtn.click((event)=>{
 
@@ -149,76 +147,4 @@ function rowAmtToCreate () {
       rowAmt = newArr.length;
       return rowAmt;
 }
-
-function bloodSplatterEffects () {
-     
-     $('.bloodSplatter0').hide();
-     $('.bloodSplatter1').hide();
-     $('.bloodSplatter2').hide();
-     $('.bloodSplatter3').hide();
-     $('.bloodSplatter4').hide();
-     
-     fadeInAndOut();
-     setTimeout(function(){
-     bloodSplatterEffects();
-     },28500);
-}
-
-function fadeInAndOut () {
-     let randomNumber = 0;
-
-     setTimeout(function(){
-          randomNumber = Math.floor(Math.random()*5);
-          $('.bloodSplatter1').attr('src', `bloodsplatter${randomNumber}.png`);
-          $('.bloodSplatter1').fadeIn(800);
-     },2000);
-
-     setTimeout(function(){
-          bloodSplatterFadeOut();
-     },7000);
-
-     setTimeout(function(){
-          randomNumber = Math.floor(Math.random()*5);
-          $('.bloodSplatter2').attr('src', `bloodsplatter${randomNumber}.png`);
-          $('.bloodSplatter2').fadeIn(800);
-     },8000);
-
-     setTimeout(function(){
-          bloodSplatterFadeOut();
-     },13000);
-
-     setTimeout(function(){
-          randomNumber = Math.floor(Math.random()*5);
-          $('.bloodSplatter3').attr('src', `bloodsplatter${randomNumber}.png`);
-          $('.bloodSplatter3').fadeIn(800);
-     },14000);
-     setTimeout(function(){
-          bloodSplatterFadeOut();
-     },19000);
-     setTimeout(function(){
-          randomNumber = Math.floor(Math.random()*5);
-          $('.bloodSplatter0').attr('src', `bloodsplatter${randomNumber}.png`);
-          $('.bloodSplatter0').fadeIn(600);
-     },20000);
-     setTimeout(function(){
-          bloodSplatterFadeOut();
-     },23000);
-     setTimeout(function(){
-          randomNumber = Math.floor(Math.random()*5);
-          $('.bloodSplatter4').attr('src', `bloodsplatter${randomNumber}.png`);
-          $('.bloodSplatter4').fadeIn(600);
-     },25000);
-     setTimeout(function(){
-          bloodSplatterFadeOut();
-     },28000);
-}
-
-function bloodSplatterFadeOut() {
-     $('.bloodSplatter0').fadeOut(800);
-     $('.bloodSplatter1').fadeOut(800);
-     $('.bloodSplatter2').fadeOut(800);
-     $('.bloodSplatter3').fadeOut(800);
-     $('.bloodSplatter4').fadeOut(800);
-}
-
 

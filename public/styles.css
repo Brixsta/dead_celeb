@@ -113,7 +113,7 @@ body {
     flex-direction:row;
     align-items:center;
     justify-content:center;
-    margin-top:10px;
+    margin-top:20px;
 }
 
 .firstNameInputBox, .lastNameInputBox {
@@ -123,14 +123,15 @@ body {
     display:flex;
     flex-direction:row;
     justify-content:space-around;
-    border:solid 2px black;
     margin:0px 10px;
     align-items:center;
+    font-family: 'EB Garamond', serif;
+    color:rgb(223, 223, 223);
 }
 
 .firstNameInput, .lastNameInput {
     padding:5px;
-    height:20px;
+    height:15px;
     width:70px;
     background-color:orange;
 }

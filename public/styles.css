@@ -29,11 +29,11 @@ body {
 
 .container h1 {
     text-align:center;
-    margin:0px;
     padding:0px;
     font-family: 'EB Garamond', serif;
     letter-spacing:1px;
     color:rgb(223, 223, 223);
+    margin:20px 0px;
 }
 
 .deathSelect {
@@ -41,7 +41,6 @@ body {
     padding:5px;
     text-align:center;
     margin:auto;
-    margin-top:20px;
     margin-bottom:0px;
     border:0px;
 
@@ -68,7 +67,6 @@ body {
     width:200px;
     height:30px;
     margin:auto;
-    margin-top:20px;
     margin-bottom:0px;
     border:0px;
     cursor:pointer;

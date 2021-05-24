@@ -22,7 +22,26 @@ bloodSplatterEffects();
 
 $( document ).ready(function() {
     $searchBtn.click((event)=>{
- 
+     var graveyardMusic = new Audio ('graveyard.mp3');
+     var musicOn;
+
+     if(musicOn === false) {
+          console.log('music is now on');
+          graveyardMusic.play();
+          musicOn = true;
+          setTimeout(function(){musicOn = false;
+          console.log('status of musicOn var:', musicOn)},10000);
+          setTimeout(function(){musicOn = false},390000);
+     }
+
+     
+     
+
+     
+
+
+
+
      deathSelectVal = $deathSelect.val().toLowerCase();
 
           if(deathSelectVal === 'drug_overdose') {

@@ -156,6 +156,7 @@ function bloodSplatterEffects () {
      $('.bloodSplatter1').hide();
      $('.bloodSplatter2').hide();
      $('.bloodSplatter3').hide();
+     $('.bloodSplatter4').hide();
      
      fadeInAndOut();
      setTimeout(function(){
@@ -167,7 +168,7 @@ function fadeInAndOut () {
      let randomNumber = 0;
 
      setTimeout(function(){
-          randomNumber = Math.floor(Math.random()*4);
+          randomNumber = Math.floor(Math.random()*5);
           $('.bloodSplatter1').attr('src', `bloodsplatter${randomNumber}.png`);
           $('.bloodSplatter1').fadeIn(800);
      },2000);
@@ -177,7 +178,7 @@ function fadeInAndOut () {
      },7000);
 
      setTimeout(function(){
-          randomNumber = Math.floor(Math.random()*4);
+          randomNumber = Math.floor(Math.random()*5);
           $('.bloodSplatter2').attr('src', `bloodsplatter${randomNumber}.png`);
           $('.bloodSplatter2').fadeIn(800);
      },8000);
@@ -187,7 +188,7 @@ function fadeInAndOut () {
      },13000);
 
      setTimeout(function(){
-          randomNumber = Math.floor(Math.random()*4);
+          randomNumber = Math.floor(Math.random()*5);
           $('.bloodSplatter3').attr('src', `bloodsplatter${randomNumber}.png`);
           $('.bloodSplatter3').fadeIn(800);
      },14000);
@@ -195,7 +196,7 @@ function fadeInAndOut () {
           bloodSplatterFadeOut();
      },19000);
      setTimeout(function(){
-          randomNumber = Math.floor(Math.random()*4);
+          randomNumber = Math.floor(Math.random()*5);
           $('.bloodSplatter0').attr('src', `bloodsplatter${randomNumber}.png`);
           $('.bloodSplatter0').fadeIn(600);
      },20000);
@@ -203,7 +204,7 @@ function fadeInAndOut () {
           bloodSplatterFadeOut();
      },23000);
      setTimeout(function(){
-          randomNumber = Math.floor(Math.random()*4);
+          randomNumber = Math.floor(Math.random()*5);
           $('.bloodSplatter4').attr('src', `bloodsplatter${randomNumber}.png`);
           $('.bloodSplatter4').fadeIn(600);
      },25000);

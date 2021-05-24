@@ -107,9 +107,14 @@ table, th, td {
     text-align:center;
   }
 
-  th {
-      background-color: black;
+  td {
+      background-color:black;
       color:white;
+  }
+
+  th {
+      background-color: white;
+      color:black;
   }
 
   .bloodSplatter1 {

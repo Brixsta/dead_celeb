@@ -154,22 +154,14 @@ function rowAmtToCreate () {
 
 function bloodSplatterEffects () {
      
-
-
-     console.log('bloodsplatter executed');
-
-     
-
-
      $('.bloodSplatter0').hide();
      $('.bloodSplatter1').hide();
      $('.bloodSplatter2').hide();
      $('.bloodSplatter3').hide();
      
-     
      fadeInAndOut();
      setTimeout(function(){
-          bloodSplatterEffects();
+     bloodSplatterEffects();
      },24500);
 }
 

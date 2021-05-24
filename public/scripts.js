@@ -71,17 +71,6 @@ $( document ).ready(function() {
      $celebBox.fadeIn(750);
 }
 
-function listOfDead (array, deathIdNum) {
-          let newArr = [];
-
-          for(let i=0; i<array.length; i++) {
-          if(array[i].deathid === deathIdNum) {
-               newArr.push(array[i]);
-          }
-     }
-     return newArr;
-}
-
 function createTable (array) {
      var $celebTable = $('<table></table', {class:'celebTable'});
      var $firstNameHeading = $('<th></th>', {text:'First Name'});

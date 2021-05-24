@@ -106,6 +106,7 @@ function createTable (array) {
 function celebToDeathMap (array) {
      for(let i=0; i<array.length; i++) {
           if(array[i].deathid === 111) {
+               profileExists(111);
                deathObj.drug_overdose.push(array[i]);
           } else if(array[i].deathid === 222) {
                deathObj.suicide.push(array[i]);
@@ -200,6 +201,12 @@ function bloodSplatterFadeOut() {
      $('.bloodSplatter1').fadeOut(800);
      $('.bloodSplatter2').fadeOut(800);
      $('.bloodSplatter3').fadeOut(800);
+}
+
+function profileExists (num) {
+     if(num === deathNumber) {
+          console.log('This is a repeat');
+     }
 }
 
 

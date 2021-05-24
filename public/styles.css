@@ -109,13 +109,12 @@ table, th, td {
     padding:5px;
     font-family: 'EB Garamond', serif;
     text-align:center;
-    color:red;
   }
 
 
   th {
       background-color:white;
-      color:black;
+      color:rgb(52, 0, 0);
   }
 
   td {

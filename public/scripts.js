@@ -5,6 +5,7 @@ var $body = $('body');
 var results;
 var deathNumber = 0;
 var deathSelectVal = '';
+var musicOn = false;
 
 deathObj = {
      drug_overdose: [],
@@ -23,7 +24,6 @@ bloodSplatterEffects();
 $( document ).ready(function() {
     $searchBtn.click((event)=>{
      var graveyardMusic = new Audio ('graveyard.mp3');
-     var musicOn = false;
 
      if(musicOn === false) {
           console.log('music is now on');

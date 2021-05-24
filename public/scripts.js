@@ -175,7 +175,6 @@ function bloodSplatterEffects () {
 
 function fadeInAndOut () {
      let randomNumber = 0;
-     console.log('random number is', randomNumber);
 
      setTimeout(function(){
           randomNumber = Math.floor(Math.random()*4);
@@ -190,7 +189,6 @@ function fadeInAndOut () {
 
      setTimeout(function(){
           randomNumber = Math.floor(Math.random()*4);
-          console.log('11000');
           $('.bloodSplatter2').attr('src', `bloodsplatter${randomNumber}.png`);
           $('.bloodSplatter2').fadeIn(800);
      },8000);
@@ -201,7 +199,6 @@ function fadeInAndOut () {
 
      setTimeout(function(){
           randomNumber = Math.floor(Math.random()*4);
-          console.log('17000');
           $('.bloodSplatter3').attr('src', `bloodsplatter${randomNumber}.png`);
           $('.bloodSplatter3').fadeIn(800);
      },14000);
@@ -210,13 +207,12 @@ function fadeInAndOut () {
      },19000);
      setTimeout(function(){
           randomNumber = Math.floor(Math.random()*4);
-          console.log('23000');
           $('.bloodSplatter0').attr('src', `bloodsplatter${randomNumber}.png`);
           $('.bloodSplatter0').fadeIn(600);
      },20000);
      setTimeout(function(){
           bloodSplatterFadeOut();
-     },25000);
+     },24000);
 }
 
 function bloodSplatterFadeOut() {

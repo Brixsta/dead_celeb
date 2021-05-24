@@ -183,7 +183,6 @@ function fadeInAndOut () {
 
      setTimeout(function(){
           randomNumber = Math.floor(Math.random()*4);
-          console.log('random number is:', randomNumber);
           console.log('10000');
           $(`.bloodSplatter${randomNumber}`).fadeOut(600);
      },10000);
@@ -196,7 +195,6 @@ function fadeInAndOut () {
      },11000);
 
      setTimeout(function(){
-          randomNumber = Math.floor(Math.random()*4);
           console.log('16000');
           $(`.bloodSplatter${randomNumber}`).fadeOut(600);
      },16000);
@@ -207,7 +205,6 @@ function fadeInAndOut () {
           $('.bloodSplatter3').fadeIn(800);
      },17000);
      setTimeout(function(){
-          randomNumber = Math.floor(Math.random()*4);
           console.log('22000');
           $('.bloodSplatter3').attr('src', `bloodsplatter${randomNumber}.png`);
           $(`.bloodSplatter${randomNumber}`).fadeOut(600);
@@ -219,7 +216,6 @@ function fadeInAndOut () {
           $('.bloodSplatter0').fadeIn(600);
      },23000);
      setTimeout(function(){
-          randomNumber = Math.floor(Math.random()*4);
           console.log('28000');
           $(`.bloodSplatter${randomNumber}`).fadeOut(600);
      },28000);

@@ -157,6 +157,10 @@ function bloodSplatterEffects () {
 
 
      console.log('bloodsplatter executed');
+
+     
+
+
      $('.bloodSplatter0').hide();
      $('.bloodSplatter1').hide();
      $('.bloodSplatter2').hide();
@@ -184,7 +188,10 @@ function fadeInAndOut () {
      setTimeout(function(){
           randomNumber = Math.floor(Math.random()*4);
           console.log('10000');
-          $(`.bloodSplatter${randomNumber}`).fadeOut(600);
+          $('.bloodSplatter0').fadeOut(800);
+          $('.bloodSplatter1').fadeOut(800);
+          $('.bloodSplatter2').fadeOut(800);
+          $('.bloodSplatter3').fadeOut(800);
      },10000);
 
      setTimeout(function(){
@@ -196,18 +203,24 @@ function fadeInAndOut () {
 
      setTimeout(function(){
           console.log('16000');
-          $(`.bloodSplatter${randomNumber}`).fadeOut(600);
+          $('.bloodSplatter0').fadeOut(800);
+          $('.bloodSplatter1').fadeOut(800);
+          $('.bloodSplatter2').fadeOut(800);
+          $('.bloodSplatter3').fadeOut(800);
      },16000);
 
      setTimeout(function(){
           randomNumber = Math.floor(Math.random()*4);
           console.log('17000');
+          $('.bloodSplatter3').attr('src', `bloodsplatter${randomNumber}.png`);
           $('.bloodSplatter3').fadeIn(800);
      },17000);
      setTimeout(function(){
           console.log('22000');
-          $('.bloodSplatter3').attr('src', `bloodsplatter${randomNumber}.png`);
-          $(`.bloodSplatter${randomNumber}`).fadeOut(600);
+          $('.bloodSplatter0').fadeOut(800);
+          $('.bloodSplatter1').fadeOut(800);
+          $('.bloodSplatter2').fadeOut(800);
+          $('.bloodSplatter3').fadeOut(800);
      },22000);
      setTimeout(function(){
           randomNumber = Math.floor(Math.random()*4);
@@ -217,7 +230,10 @@ function fadeInAndOut () {
      },23000);
      setTimeout(function(){
           console.log('28000');
-          $(`.bloodSplatter${randomNumber}`).fadeOut(600);
+          $('.bloodSplatter0').fadeOut(800);
+          $('.bloodSplatter1').fadeOut(800);
+          $('.bloodSplatter2').fadeOut(800);
+          $('.bloodSplatter3').fadeOut(800);
      },28000);
 }
 

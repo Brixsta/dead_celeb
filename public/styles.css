@@ -105,6 +105,11 @@ body {
     outline:0;
 }
 
+.firstNameInputBox, .lastNameInputBox {
+    background-color:green;
+    height:50px;
+    width:80%;
+}
 .celebBox {
     height:100%;
     width:500px;

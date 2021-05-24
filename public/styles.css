@@ -111,6 +111,8 @@ body {
     background-color:blue;
     display:flex;
     flex-direction:row;
+    align-items:center;
+    justify-content:center;
 }
 
 .firstNameInputBox, .lastNameInputBox {
@@ -127,6 +129,7 @@ body {
 .fistNameInput, lastNameInput {
     padding:5px;
     height:20px;
+    width:50px;
 }
 
 

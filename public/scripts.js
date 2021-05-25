@@ -82,8 +82,8 @@ $( document ).ready(function() {
 
           // user clicks to add a dead celeb
           $addCelebBtn.click((event)=>{
-               console.log('celebButton has been pressed');
-               const data = 'firstname=crap lastname=dog celebid=1 deathid=222';
+               console.log('addNewCeleb has been pressed');
+               const data = {firstname:'chuck'};
                console.log('heres the request', makeRequest(data));
           });
 

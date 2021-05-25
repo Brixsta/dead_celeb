@@ -72,9 +72,7 @@ $( document ).ready(function() {
                console.log('firstNameInput.val() is: ', $firstNameInput.val());
                console.log('lastNameInput.val() is: ', $lastNameInput.val());
 
-               // let data = {firstname:$firstNameInput.val(), lastName:$lastNameInput.val()};
-
-               let data = {firstname:$firstNameInput.val()};
+               let data = {firstName:$firstNameInput.val(), lastName:$lastNameInput.val()};
 
                makeRequest(data);
 

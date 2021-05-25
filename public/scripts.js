@@ -139,7 +139,7 @@ function createTable (array, value) {
      var $lastNameHeading = $('<th></th>', {text:'Last Name'});
      var $celebIdHeading = $('<th></th>', {text:'Celeb Id'});
      var $deathIdHeading = $('<th></th>', {text:'Death Id'});
-     var tableRowAmt = rowAmtToCreate();
+     var tableRowAmt = rowAmtToCreate(results);
 
      $celebTable.append($firstNameHeading, $lastNameHeading, $celebIdHeading, $deathIdHeading);
      $('.celebBox').append($celebTable);
@@ -193,13 +193,13 @@ function celebToDeathMap (array) {
 }
 
 // The Amount of rows to create for the tables
-function rowAmtToCreate () {
+function rowAmtToCreate (array) {
      let newArr = [];
      let rowAmt = 0;
 
-     for(let i=0; i<results.length; i++) {
-          if(results[i].deathid === deathNumber) {
-               newArr.push(results[i]);
+     for(let i=0; i<array.length; i++) {
+          if(array[i].deathid === deathNumber) {
+               newArr.push(array[i]);
           }
       }
       rowAmt = newArr.length;

@@ -11,7 +11,7 @@ var deathSelectVal = '';
 const makeRequest = (data) => {
      $.post({
           url: "/api/dead_celeb",
-          data: data,
+          data: JSON.stringify(data),
           success: (res) => {
                console.log(res);
           },

@@ -92,7 +92,7 @@ $( document ).ready(function() {
                };
                console.log('these are the new results length', results.length);
                celebToDeathMap(results);
-               
+
                createProfile(deathSelectNewCelebVal);  
                createTable(results,deathSelectNewCelebVal);
 
@@ -133,6 +133,7 @@ $( document ).ready(function() {
 
 // create the table for the celebBox
 function createTable (array, value) {
+     $('.celebTable').remove();
      var $celebTable = $('<table></table', {class:'celebTable'});
      var $firstNameHeading = $('<th></th>', {text:'First Name'});
      var $lastNameHeading = $('<th></th>', {text:'Last Name'});

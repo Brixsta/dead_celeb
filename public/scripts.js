@@ -216,6 +216,7 @@ function assignDeathNumber (value) {
 
 function celebHasBeenAdded () {
      $('.celebBox').remove();
+     $('.celebAddedBox').remove();
      let $celebAddedBox = $('<div></div>', {class:'celebAddedBox'});
      let $celebAddedMsg = $('<h1></h1>', {class:'celebAddedMsg', text:`Your dead celeb has been added.`});
      $body.append($celebAddedBox);

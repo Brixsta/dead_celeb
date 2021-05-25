@@ -90,11 +90,7 @@ $( document ).ready(function() {
                     aids: [],
                     car_crash: []
                };
-               console.log('these are the new results length', results.length);
-               celebToDeathMap(results);
-
-               createProfile(deathSelectNewCelebVal);  
-               createTable(results,deathSelectNewCelebVal);
+               
 
                
                // make an additional git request to view updated database
@@ -102,6 +98,12 @@ $( document ).ready(function() {
                 results = data;
                 console.log('These are the new results: ', results);
                });
+
+               console.log('these are the new results length', results.length);
+               celebToDeathMap(results);
+
+               createProfile(deathSelectNewCelebVal);  
+               createTable(results,deathSelectNewCelebVal);
 
           
      

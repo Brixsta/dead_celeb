@@ -88,6 +88,8 @@ $( document ).ready(function() {
 
                assignDeathNumber(deathSelectNewCelebVal);
 
+               console.log('This is the new deathNumber');
+
      
           });
 
@@ -133,7 +135,6 @@ function createTable (array) {
      }   
 
      for(let i=0; i< tableRowAmt; i++) {
-          // var tableRow = ('.tableRow');
           var firstNameCell = document.createElement('td');
           firstNameCell.textContent = deathObj[deathSelectVal][i].firstname;
           var lastNameCell = document.createElement('td');

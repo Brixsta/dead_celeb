@@ -234,5 +234,6 @@ function celebHasBeenAdded () {
      var $celebAddedMsg = $('<h1></h1>', {class:'celebAddedMsg', text:`Your dead celeb has been added.`});
      $body.append($celebAddedBox);
      $celebAddedBox.append($celebAddedMsg);
+     $('.celebAddedBox').hide();
      $('.celebAddedBox').fadeIn();
 }

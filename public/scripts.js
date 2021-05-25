@@ -1,6 +1,8 @@
 const $container = $('.container');
 const $searchBtn = $('.searchBtn');
 const $addCelebBtn = $('.addCelebBtn');
+const $firstNameInput = $('.firstNameInput');
+const $lastNameInput = $('.lastNameInput');
 var $deathSelect = $('.deathSelect');
 const $body = $('body');
 var results;
@@ -83,7 +85,7 @@ $( document ).ready(function() {
           // user clicks to add a dead celeb
           $addCelebBtn.click((event)=>{
                console.log('addNewCeleb has been pressed');
-               const data = {firstname:$('.firstNameInput'), lastName:$('.lastNameInput')};
+               const data = {firstname:$firstNameInput.val(), lastName:$lastNameInput.val()};
                console.log('heres the request', makeRequest(data));
           });
 

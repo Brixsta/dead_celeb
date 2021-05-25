@@ -70,31 +70,23 @@ $( document ).ready(function() {
 
                $('.celebBox').fadeOut();
                deathNumber = 0;
-               console.log('here is the variable $deathSelectNewCeleb', $deathSelectNewCeleb);
                deathSelectNewCelebVal = $deathSelectNewCeleb.val().toLowerCase();
-               console.log('deathSelectNewCelebVal is: ',deathSelectNewCelebVal);
                assignDeathNumber(deathSelectNewCelebVal);
                let data = {firstName:$firstNameInput.val(), lastName:$lastNameInput.val(), deathId:deathNumber};
-               console.log('about to send this data');
+
 
                makeRequest(data);
+
+               deathObj = {};
+               celebToDeathMap(results);
+               createProfile();  
+               createTable(results);
 
                
                // make an additional git request to view updated database
                $.get(`https://hidden-plateau-56299.herokuapp.com/api/dead_celeb/`, (data) => {
                 results = data;
                 console.log('These are the new results: ', results);
-
-
-                    
-                    // console.log('This is the new deathSelectNewCelebVal: ', deathSelectNewCelebVal);
-                    
-     
-                    // console.log('This is the new deathNumber', deathNumber);
-                    // deathObj = {};
-                    // console.log('here is the deathObj', deathObj);
-                    // celebToDeathMap(results);
-                    // console.log('here is the deathObj after mapping');
                });
 
                

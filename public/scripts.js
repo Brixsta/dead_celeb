@@ -22,6 +22,17 @@ deathObj = {
 $( document ).ready(function() {
     $searchBtn.click((event)=>{
 
+     const makeRequest = (data) => {
+          $.post({
+               url: '/api/dead_celeb',
+               data: JSON.stringify(data),
+               success: (res) => {
+                    console.log(res);
+               },
+               contenttype:'application/json',
+          })
+     };
+
      deathSelectVal = $deathSelect.val().toLowerCase();
 
           if(deathSelectVal === 'drug_overdose') {
@@ -64,23 +75,14 @@ $( document ).ready(function() {
           });
 
 
-
+          // user clicks to add a dead celeb
           $addCelebBtn.click((event)=>{
                console.log('it WOrked');
 
-               const makeRequest = (data) => {
-                    $.post({
-                         url: '/api/dead_celeb',
-                         data: JSON.stringify(data),
-                         success: (res) => {
-                              console.log(res);
-                         },
-                         contenttype:'application/json',
-                    })
-               };
+               console.log('heres the request', makeRequest.data);
           });
 
-          console.log(makeRequest.data);
+          
 
 
 

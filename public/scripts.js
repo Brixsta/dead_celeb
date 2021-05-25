@@ -52,7 +52,7 @@ $( document ).ready(function() {
                deathNumber = 999;
           }
 
-        $.get(`https://cors-anywhere.herokuapp.com/https://hidden-plateau-56299.herokuapp.com/api/dead_celeb/`, (data) => {
+        $.get(`https://hidden-plateau-56299.herokuapp.com/api/dead_celeb/`, (data) => {
                 results = data;
                 console.log('These are the results: ', results);
 

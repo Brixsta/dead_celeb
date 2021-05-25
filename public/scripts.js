@@ -84,7 +84,13 @@ $( document ).ready(function() {
 
           // user clicks to add a dead celeb
           $addCelebBtn.click((event)=>{
-               console.log('addNewCeleb has been pressed');
+
+               if($firstNameInput.val().length < 1) {
+                    alert('Please fill all fields before submitting a new Dead Celeb');
+               } else if ($lastNameInput.val().length < 1) {
+                    alert('Please fill all fields before submitting a new Dead Celeb');
+               }
+
                const data = {firstname:$firstNameInput.val(), lastName:$lastNameInput.val()};
                console.log('heres the request', makeRequest(data));
           });

@@ -15,7 +15,7 @@ const makeRequest = (data) => {
           success: (res) => {
                console.log(res);
           },
-          contentType:"application/json",
+          dataType:"application/json",
      });
 };
 

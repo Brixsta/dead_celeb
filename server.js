@@ -41,16 +41,18 @@ app.get('/api/dead_celeb/:id', (req,res)=>{
 app.post('/api/dead_celeb', (req,res)=>{
     const newCeleb = req.body;
 
-    db.query('INSERT INTO celeb (firstName, lastName, deathId) VALUES ($1, $2, $3);', [newCeleb.firstName,
-    newCeleb.lastName, newCeleb.deathId], (err,data)=>{
-        if(err) {
-            res.append('Content-Type', 'plain/text');
-            res.status(400).send(`An error has occurred!`);
-        } else {
-            res.append('Content-Type', 'application/json');
-            res.status(200).send('Congrats your new dead_celeb was added!');
-        }
-    });
+    console.log(req.body);
+
+    // db.query('INSERT INTO celeb (firstName, lastName, deathId) VALUES ($1, $2, $3);', [newCeleb.firstName,
+    // newCeleb.lastName, newCeleb.deathId], (err,data)=>{
+    //     if(err) {
+    //         res.append('Content-Type', 'plain/text');
+    //         res.status(400).send(`An error has occurred!`);
+    //     } else {
+    //         res.append('Content-Type', 'application/json');
+    //         res.status(200).send('Congrats your new dead_celeb was added!');
+    //     }
+    // });
 });
 
 app.put('/api/dead_celeb/:id', (req,res)=>{

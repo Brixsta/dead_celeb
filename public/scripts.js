@@ -46,34 +46,6 @@ $( document ).ready(function() {
 
      assignDeathNumber(deathSelectVal);
 
-          // if(deathSelectVal === 'drug_overdose') {
-          //      if(deathNumber === 111){return;}
-          //      deathNumber = 111;
-          // } else if (deathSelectVal === 'suicide') {
-          //      if(deathNumber === 222){return;}
-          //      deathNumber = 222;
-          // } else if (deathSelectVal === 'murder') {
-          //      if(deathNumber === 333){return;}
-          //      deathNumber = 333;
-          // } else if (deathSelectVal === 'plane_crash') {
-          //      if(deathNumber === 444){return;}
-          //      deathNumber = 444;
-          // } else if (deathSelectVal === 'skiing_accident') {
-          //      if(deathNumber === 555){return;}
-          //      deathNumber = 555;
-          // } else if (deathSelectVal === 'botched_surgery') {
-          //      if(deathNumber === 666){return;}
-          //      deathNumber = 666;
-          // } else if (deathSelectVal === 'natural_causes') {
-          //      if(deathNumber === 777){return;}
-          //      deathNumber = 777;
-          // } else if(deathSelectVal === 'aids') {
-          //      if(deathNumber === 888){return;}
-          //      deathNumber = 888;
-          // } else if (deathSelectVal === 'car_crash') {
-          //      if(deathNumber === 999){return;}
-          //      deathNumber = 999;
-          // }
 
         $.get(`https://hidden-plateau-56299.herokuapp.com/api/dead_celeb/`, (data) => {
                 results = data;
@@ -114,6 +86,8 @@ $( document ).ready(function() {
                });
 
                deathSelectNewCelebVal = $deathSelectNewCeleb.val().toLowerCase();
+
+               assignDeathNumber(deathSelectNewCelebVal);
 
      
           });

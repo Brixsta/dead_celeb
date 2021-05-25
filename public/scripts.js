@@ -59,6 +59,7 @@ $( document ).ready(function() {
           // user clicks to add a dead celeb
           $addCelebBtn.click((event)=>{
           
+               // checks user has filled out all fields
                if($firstNameInput.val().length < 1) {
                     alert('Please fill all fields before submitting a new Dead Celeb');
                     return;
@@ -69,13 +70,13 @@ $( document ).ready(function() {
 
                $('.celebBox').fadeOut();
                deathNumber = 0;
-               console.log('firstNameInput.val() is: ', $firstNameInput.val());
-               console.log('lastNameInput.val() is: ', $lastNameInput.val());
-
-               let data = {firstName:$firstNameInput.val(), lastName:$lastNameInput.val()};
+               assignDeathNumber(deathSelectNewCelebVal);
+               let data = {firstName:$firstNameInput.val(), lastName:$lastNameInput.val(), deathId:deathNumber};
+               console.log('about to send this data');
 
                makeRequest(data);
 
+               
                // make an additional git request to view updated database
                $.get(`https://hidden-plateau-56299.herokuapp.com/api/dead_celeb/`, (data) => {
                 results = data;
@@ -84,7 +85,7 @@ $( document ).ready(function() {
 
                     // deathSelectNewCelebVal = $deathSelectNewCeleb.val().toLowerCase();
                     // console.log('This is the new deathSelectNewCelebVal: ', deathSelectNewCelebVal);
-                    // assignDeathNumber(deathSelectNewCelebVal);
+                    
      
                     // console.log('This is the new deathNumber', deathNumber);
                     // deathObj = {};

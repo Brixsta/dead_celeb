@@ -75,8 +75,8 @@ $( document ).ready(function() {
                          success: (res) => {
                               console.log(res);
                          },
-                         contenttype:'application/json';
-                    });
+                         contenttype:'application/json',
+                    })
                };
           });
 

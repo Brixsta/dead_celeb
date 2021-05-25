@@ -75,9 +75,22 @@ $( document ).ready(function() {
                let data = {firstName:$firstNameInput.val(), lastName:$lastNameInput.val(), deathId:deathNumber};
 
 
-               makeRequest(data);
+               makeRequest(data); // Make the actual post request
 
-               deathObj = {};
+
+               // clearing out the deathObj object to be refilled
+               deathObj = {
+                    drug_overdose: [],
+                    suicide: [],
+                    murder: [],
+                    plane_crash: [],
+                    skiing_accident: [],
+                    botched_surgery: [],
+                    natural_causes: [],
+                    aids: [],
+                    car_crash: []
+               };
+
                celebToDeathMap(results);
                createProfile();  
                createTable(results);

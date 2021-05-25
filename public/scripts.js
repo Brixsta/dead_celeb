@@ -70,6 +70,7 @@ $( document ).ready(function() {
 
                $('.celebBox').fadeOut();
                deathNumber = 0;
+               deathSelectNewCelebVal = $deathSelectNewCeleb.val().toLowerCase();
                console.log('deathSelectNewCelebVal is: ',deathSelectNewCelebVal);
                assignDeathNumber(deathSelectNewCelebVal);
                let data = {firstName:$firstNameInput.val(), lastName:$lastNameInput.val(), deathId:deathNumber};
@@ -84,7 +85,7 @@ $( document ).ready(function() {
                 console.log('These are the new results: ', results);
 
 
-                    // deathSelectNewCelebVal = $deathSelectNewCeleb.val().toLowerCase();
+                    
                     // console.log('This is the new deathSelectNewCelebVal: ', deathSelectNewCelebVal);
                     
      

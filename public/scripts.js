@@ -11,7 +11,7 @@ var deathSelectVal = '';
 const makeRequest = (data) => {
      $.post({
           url: "https://hidden-plateau-56299.herokuapp.com/api/dead_celeb",
-          data: JSON.stringify(data),
+          data: data,
           success: (res) => {
                console.log(res);
           },

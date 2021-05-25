@@ -171,6 +171,7 @@ function celebToDeathMap (array) {
      }
 }
 
+// The Amount of rows to create for the tables
 function rowAmtToCreate () {
      let newArr = [];
      let rowAmt = 0;
@@ -180,38 +181,38 @@ function rowAmtToCreate () {
                newArr.push(results[i]);
           }
       }
-
       rowAmt = newArr.length;
       return rowAmt;
 }
 
+// Based on the deathSelect Val assign a deathnumber
 function assignDeathNumber (value) {
      if(value === 'drug_overdose') {
-          if(deathNumber === 111){return;}
+          if(value === 111){return;}
           deathNumber = 111;
      } else if (value === 'suicide') {
-          if(deathNumber === 222){return;}
+          if(value === 222){return;}
           deathNumber = 222;
      } else if (value === 'murder') {
-          if(deathNumber === 333){return;}
+          if(value === 333){return;}
           deathNumber = 333;
      } else if (value === 'plane_crash') {
-          if(deathNumber === 444){return;}
+          if(value === 444){return;}
           deathNumber = 444;
      } else if (value === 'skiing_accident') {
-          if(deathNumber === 555){return;}
+          if(value === 555){return;}
           deathNumber = 555;
      } else if (value === 'botched_surgery') {
-          if(deathNumber === 666){return;}
+          if(value === 666){return;}
           deathNumber = 666;
      } else if (value === 'natural_causes') {
-          if(deathNumber === 777){return;}
+          if(value === 777){return;}
           deathNumber = 777;
      } else if(value === 'aids') {
-          if(deathNumber === 888){return;}
+          if(value === 888){return;}
           deathNumber = 888;
      } else if (value === 'car_crash') {
-          if(deathNumber === 999){return;}
+          if(value === 999){return;}
           deathNumber = 999;
      }
 }

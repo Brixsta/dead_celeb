@@ -92,7 +92,8 @@ $( document ).ready(function() {
                };
                console.log('these are the new results length', results.length);
                celebToDeathMap(results);
-               createProfile();  
+               
+               createProfile(deathSelectNewCelebVal);  
                createTable(results,deathSelectNewCelebVal);
 
                

@@ -84,7 +84,7 @@ $( document ).ready(function() {
 
           // user clicks to add a dead celeb
           $addCelebBtn.click((event)=>{
-
+          
                if($firstNameInput.val().length < 1) {
                     alert('Please fill all fields before submitting a new Dead Celeb');
                     return;
@@ -94,6 +94,9 @@ $( document ).ready(function() {
                }
 
                $('.celebBox').fadeOut();
+               deathNumber = 0;
+
+               console.log('death Number is ', deathNumber);
 
                const data = {firstname:$firstNameInput.val(), lastName:$lastNameInput.val()};
                console.log('heres the request', makeRequest(data));

@@ -7,6 +7,20 @@ var results;
 var deathNumber = 0;
 var deathSelectVal = '';
 
+
+const makeRequest = (data) => {
+     $.post({
+          url: '/api/dead_celeb',
+          data: JSON.stringify(data),
+          success: (res) => {
+               console.log(res);
+          },
+          contenttype:'application/json',
+     })
+};
+
+
+
 deathObj = {
      drug_overdose: [],
      suicide: [],
@@ -22,16 +36,7 @@ deathObj = {
 $( document ).ready(function() {
     $searchBtn.click((event)=>{
 
-     const makeRequest = (data) => {
-          $.post({
-               url: '/api/dead_celeb',
-               data: JSON.stringify(data),
-               success: (res) => {
-                    console.log(res);
-               },
-               contenttype:'application/json',
-          })
-     };
+     
 
      deathSelectVal = $deathSelect.val().toLowerCase();
 

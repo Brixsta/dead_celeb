@@ -99,7 +99,7 @@ $( document ).ready(function() {
                 console.log('These are the new results: ', results);
                     // celebToDeathMap(results);
 
-                    console.log('this is the deathObj', deathObj);
+                    // console.log('this is the deathObj', deathObj);
                     celebHasBeenAdded();
                     // createProfile(deathSelectNewCelebVal);  
                     // createTable(results,deathSelectNewCelebVal);
@@ -234,7 +234,8 @@ function assignDeathNumber (value) {
 }
 
 function celebHasBeenAdded () {
-     var $celebAddedBox = $('<div></div>', {class:'celebAddedBox', text:`Your dead celeb has been added`});
-
+     var $celebAddedBox = $('<div></div>', {class:'celebAddedBox'});
+     var $celebAddedMsg = $('<h1></h1>', {class:'celebAddedMsg', text:`Your dead celeb has been added`});
      $body.append($celebAddedBox);
+     $celebAddedBox.append($celebAddedMsg);
 }

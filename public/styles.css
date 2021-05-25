@@ -158,6 +158,14 @@ body {
     box-shadow:0px 0px 10px rgba(255, 255, 255, .3);
 }
 
+.celebAddedMsg {
+    text-align:center;
+    font-family: 'EB Garamond', serif;
+    font-size:25px;
+    letter-spacing:1px;
+    color:rgb(223, 223, 223);
+}
+
 .celebHeading {
     text-align:center;
     font-family: 'EB Garamond', serif;

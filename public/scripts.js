@@ -89,6 +89,8 @@ $( document ).ready(function() {
                     console.log('This is the new deathNumber', deathNumber);
                     deathObj = {};
                     console.log('here is the deathObj', deathObj);
+                    celebToDeathMap(results);
+                    console.log('here is the deathObj after mapping');
                });
 
                

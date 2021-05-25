@@ -97,12 +97,7 @@ $( document ).ready(function() {
                $.get(`https://hidden-plateau-56299.herokuapp.com/api/dead_celeb/`, (data) => {
                 results = data;
                 console.log('These are the new results: ', results);
-                    // celebToDeathMap(results);
-
-                    // console.log('this is the deathObj', deathObj);
                     celebHasBeenAdded();
-                    // createProfile(deathSelectNewCelebVal);  
-                    // createTable(results,deathSelectNewCelebVal);
                });
 
                
@@ -235,7 +230,8 @@ function assignDeathNumber (value) {
 
 function celebHasBeenAdded () {
      var $celebAddedBox = $('<div></div>', {class:'celebAddedBox'});
-     var $celebAddedMsg = $('<h1></h1>', {class:'celebAddedMsg', text:`Your dead celeb has been added`});
+     var $celebAddedMsg = $('<h1></h1>', {class:'celebAddedMsg', text:`Your dead celeb has been added.`});
      $body.append($celebAddedBox);
      $celebAddedBox.append($celebAddedMsg);
+     $('.celebAddedBox').fadeIn();
 }

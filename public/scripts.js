@@ -162,8 +162,8 @@ function createTable (array, value) {
          $('.tableRow')[i].append(firstNameCell, lastNameCell, celebIdCell, deathIdCell);
 
      }
-
-     console.log(tableRowAmt);
+     console.log('results being fed to tableRowFunc ', results);
+     console.log('tableRowAmt', tableRowAmt);
 
 }
 

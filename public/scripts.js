@@ -10,13 +10,13 @@ var deathSelectVal = '';
 
 const makeRequest = (data) => {
      $.post({
-          url: '/api/dead_celeb',
+          url: "/api/dead_celeb",
           data: JSON.stringify(data),
           success: (res) => {
                console.log(res);
           },
-          contenttype:'application/json',
-     })
+          contentType:"application/json",
+     });
 };
 
 

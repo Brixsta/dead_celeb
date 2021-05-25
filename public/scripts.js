@@ -51,7 +51,7 @@ $( document ).ready(function() {
 
                 celebToDeathMap(results);
                 createProfile();  
-                createTable(results);
+                createTable(results,deathSelectVal);
                });
           });
 
@@ -131,7 +131,7 @@ $( document ).ready(function() {
 }
 
 // create the table for the celebBox
-function createTable (array) {
+function createTable (array, value) {
      var $celebTable = $('<table></table', {class:'celebTable'});
      var $firstNameHeading = $('<th></th>', {text:'First Name'});
      var $lastNameHeading = $('<th></th>', {text:'Last Name'});
@@ -149,13 +149,13 @@ function createTable (array) {
 
      for(let i=0; i< tableRowAmt; i++) {
           var firstNameCell = document.createElement('td');
-          firstNameCell.textContent = deathObj[deathSelectVal][i].firstname;
+          firstNameCell.textContent = deathObj[value][i].firstname;
           var lastNameCell = document.createElement('td');
-          lastNameCell.textContent = deathObj[deathSelectVal][i].lastname;
+          lastNameCell.textContent = deathObj[value][i].lastname;
           var celebIdCell = document.createElement('td');
-          celebIdCell.textContent = deathObj[deathSelectVal][i].celebid;
+          celebIdCell.textContent = deathObj[value][i].celebid;
           var deathIdCell = document.createElement('td');
-          deathIdCell.textContent = deathObj[deathSelectVal][i].deathid;
+          deathIdCell.textContent = deathObj[value][i].deathid;
 
          $('.tableRow')[i].append(firstNameCell, lastNameCell, celebIdCell, deathIdCell);
      }

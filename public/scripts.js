@@ -70,6 +70,7 @@ $( document ).ready(function() {
 
                $('.celebBox').fadeOut();
                deathNumber = 0;
+               console.log('here is the variable $deathSelectNewCeleb', $deathSelectNewCeleb);
                deathSelectNewCelebVal = $deathSelectNewCeleb.val().toLowerCase();
                console.log('deathSelectNewCelebVal is: ',deathSelectNewCelebVal);
                assignDeathNumber(deathSelectNewCelebVal);

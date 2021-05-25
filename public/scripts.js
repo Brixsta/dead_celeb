@@ -96,14 +96,14 @@ $( document ).ready(function() {
                // make an additional git request to view updated database
                $.get(`https://hidden-plateau-56299.herokuapp.com/api/dead_celeb/`, (data) => {
                 results = data;
-               
+                console.log('These are the new results: ', results);
                     // celebToDeathMap(results);
 
                     // createProfile(deathSelectNewCelebVal);  
                     // createTable(results,deathSelectNewCelebVal);
                });
 
-               console.log('These are the new results: ', results);
+               
                console.log('these are the new results length', results.length);
                
 

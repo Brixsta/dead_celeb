@@ -50,7 +50,7 @@ $( document ).ready(function() {
                 console.log('These are the results: ', results);
 
                 celebToDeathMap(results);
-                createProfile();  
+                createProfile(deathSelectVal);  
                 createTable(results,deathSelectVal);
                });
           });
@@ -93,7 +93,7 @@ $( document ).ready(function() {
                console.log('these are the new results length', results.length);
                celebToDeathMap(results);
                createProfile();  
-               createTable(results);
+               createTable(results,deathSelectNewCelebVal);
 
                
                // make an additional git request to view updated database
@@ -114,10 +114,10 @@ $( document ).ready(function() {
     });
     
     // create profile that includes celebBox
-    function createProfile() {
+    function createProfile(str) {
 
      var $celebBox = $('<div></div>', {class:'celebBox'});
-     var $celebHeading = $('<h1></h1>', {class:'celebHeading', text:`Celebrity deaths: ${$deathSelect.val().toLowerCase().replace('_', ' ')}`});
+     var $celebHeading = $('<h1></h1>', {class:'celebHeading', text:`Celebrity deaths: ${str.toLowerCase().replace('_', ' ')}`});
      var $celebDivider = $('<hr>', {class:'celebDivider'});
      // var $celebInfo = $('<p></p>', {class:'celebInfo', text:`${JSON.stringify(listOfDead(results, deathNumber))}`});
 

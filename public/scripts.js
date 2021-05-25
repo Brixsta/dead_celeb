@@ -3,13 +3,13 @@ const $searchBtn = $('.searchBtn');
 const $addCelebBtn = $('.addCelebBtn');
 const $firstNameInput = $('.firstNameInput');
 const $lastNameInput = $('.lastNameInput');
-var $deathSelect = $('.deathSelect');
-var $deathSelectNewCeleb = $('.deathSelectNewCeleb');
+const $deathSelect = $('.deathSelect');
+const $deathSelectNewCeleb = $('.deathSelectNewCeleb');
 const $body = $('body');
-var results;
-var deathNumber = 0;
-var deathSelectVal = '';
-var deathSelectNewCelebVal = '';
+let results;
+let deathNumber = 0;
+let deathSelectVal = '';
+let deathSelectNewCelebVal = '';
 
 
 const makeRequest = (data) => {
@@ -37,12 +37,9 @@ deathObj = {
 
 $( document ).ready(function() {
     $searchBtn.click((event)=>{
-
      
-     
-     deathSelectVal = $deathSelect.val().toLowerCase();
-
-     assignDeathNumber(deathSelectVal);
+     deathSelectVal = $deathSelect.val().toLowerCase(); // value in the select bar
+     assignDeathNumber(deathSelectVal); // get a deathNumber which is used to determine row length
 
 
         $.get(`https://hidden-plateau-56299.herokuapp.com/api/dead_celeb/`, (data) => {
@@ -91,34 +88,23 @@ $( document ).ready(function() {
                     car_crash: []
                };
                
-
-               
                // make an additional git request to view updated database
                $.get(`https://hidden-plateau-56299.herokuapp.com/api/dead_celeb/`, (data) => {
                 results = data;
                 console.log('These are the new results: ', results);
                     celebHasBeenAdded();
                });
-
-               
-
-          
      
           });
-
-          
-
-
-
 
     });
     
     // create profile that includes celebBox
     function createProfile(str) {
 
-     var $celebBox = $('<div></div>', {class:'celebBox'});
-     var $celebHeading = $('<h1></h1>', {class:'celebHeading', text:`Celebrity deaths: ${str.toLowerCase().replace('_', ' ')}`});
-     var $celebDivider = $('<hr>', {class:'celebDivider'});
+     let $celebBox = $('<div></div>', {class:'celebBox'});
+     let $celebHeading = $('<h1></h1>', {class:'celebHeading', text:`Celebrity deaths: ${str.toLowerCase().replace('_', ' ')}`});
+     let $celebDivider = $('<hr>', {class:'celebDivider'});
      // var $celebInfo = $('<p></p>', {class:'celebInfo', text:`${JSON.stringify(listOfDead(results, deathNumber))}`});
      $('.celebAddedBox').remove();
      $('.celebBox').remove();
@@ -133,29 +119,29 @@ $( document ).ready(function() {
 // create the table for the celebBox
 function createTable (array, value) {
      $('.celebTable').remove();
-     var $celebTable = $('<table></table', {class:'celebTable'});
-     var $firstNameHeading = $('<th></th>', {text:'First Name'});
-     var $lastNameHeading = $('<th></th>', {text:'Last Name'});
-     var $celebIdHeading = $('<th></th>', {text:'Celeb Id'});
-     var $deathIdHeading = $('<th></th>', {text:'Death Id'});
-     var tableRowAmt = rowAmtToCreate(results);
+     let $celebTable = $('<table></table', {class:'celebTable'});
+     let $firstNameHeading = $('<th></th>', {text:'First Name'});
+     let $lastNameHeading = $('<th></th>', {text:'Last Name'});
+     let $celebIdHeading = $('<th></th>', {text:'Celeb Id'});
+     let $deathIdHeading = $('<th></th>', {text:'Death Id'});
+     let tableRowAmt = rowAmtToCreate(results);
 
      $celebTable.append($firstNameHeading, $lastNameHeading, $celebIdHeading, $deathIdHeading);
      $('.celebBox').append($celebTable);
 
      for(let i=0; i<tableRowAmt; i++) {
-          var $tableRow = $('<tr></tr>', {class:'tableRow'});
+          let $tableRow = $('<tr></tr>', {class:'tableRow'});
           $('.celebTable').append($tableRow);
      }   
 
      for(let i=0; i< tableRowAmt; i++) {
-          var firstNameCell = document.createElement('td');
+          let firstNameCell = document.createElement('td');
           firstNameCell.textContent = deathObj[value][i].firstname;
-          var lastNameCell = document.createElement('td');
+          let lastNameCell = document.createElement('td');
           lastNameCell.textContent = deathObj[value][i].lastname;
-          var celebIdCell = document.createElement('td');
+          let celebIdCell = document.createElement('td');
           celebIdCell.textContent = deathObj[value][i].celebid;
-          var deathIdCell = document.createElement('td');
+          let deathIdCell = document.createElement('td');
           deathIdCell.textContent = deathObj[value][i].deathid;
 
          $('.tableRow')[i].append(firstNameCell, lastNameCell, celebIdCell, deathIdCell);
@@ -230,8 +216,8 @@ function assignDeathNumber (value) {
 
 function celebHasBeenAdded () {
      $('.celebBox').remove();
-     var $celebAddedBox = $('<div></div>', {class:'celebAddedBox'});
-     var $celebAddedMsg = $('<h1></h1>', {class:'celebAddedMsg', text:`Your dead celeb has been added.`});
+     let $celebAddedBox = $('<div></div>', {class:'celebAddedBox'});
+     let $celebAddedMsg = $('<h1></h1>', {class:'celebAddedMsg', text:`Your dead celeb has been added.`});
      $body.append($celebAddedBox);
      $celebAddedBox.append($celebAddedMsg);
      $('.celebAddedBox').hide();

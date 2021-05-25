@@ -160,7 +160,10 @@ function createTable (array, value) {
           deathIdCell.textContent = deathObj[value][i].deathid;
 
          $('.tableRow')[i].append(firstNameCell, lastNameCell, celebIdCell, deathIdCell);
+
      }
+
+     console.log(tableRowAmt);
 
 }
 

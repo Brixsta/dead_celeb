@@ -83,8 +83,8 @@ $( document ).ready(function() {
           // user clicks to add a dead celeb
           $addCelebBtn.click((event)=>{
                console.log('it WOrked');
-
-               console.log('heres the request', makeRequest.data);
+               const data = 'crappola';
+               console.log('heres the request', makeRequest(data));
           });
 
           

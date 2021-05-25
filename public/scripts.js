@@ -126,6 +126,13 @@ $( document ).ready(function() {
      $celebBox.append($celebHeading, $celebDivider);
      $celebBox.hide();
      $celebBox.fadeIn(750);
+
+     $.get(`https://hidden-plateau-56299.herokuapp.com/api/dead_celeb/`, (data) => {
+                results = data;
+                console.log('These are the new results: ', results);
+
+               });
+          
 }
 
 function createTable (array) {

@@ -1,5 +1,6 @@
 var $container = $('.container');
 var $searchBtn = $('.searchBtn');
+var $addCelebBtn = $('.addCelebBtn');
 var $deathSelect = $('.deathSelect');
 var $body = $('body');
 var results;
@@ -61,6 +62,29 @@ $( document ).ready(function() {
                 createTable(results);
                });
           });
+
+
+
+          $addCelebBtn.click((event)=>{
+               console.log('it WOrked');
+
+               const makeRequest = (data) => {
+                    $.post({
+                         url: '/api/dead_celeb',
+                         data: JSON.stringify(data),
+                         success: (res) => {
+                              console.log(res);
+                         },
+                         contenttype:'application/json';
+                    });
+               };
+          });
+
+          console.log(makeRequest.data);
+
+
+
+
     });
 
     function createProfile() {

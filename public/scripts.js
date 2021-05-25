@@ -71,7 +71,6 @@ $( document ).ready(function() {
                deathNumber = 0;
                console.log('firstNameInput.val() is: ', $firstNameInput.val());
                console.log('lastNameInput.val() is: ', $lastNameInput.val());
-               console.log('death Number is ', deathNumber);
 
                let data = {firstname:$firstNameInput.val(), lastName:$lastNameInput.val()};
 
@@ -88,6 +87,8 @@ $( document ).ready(function() {
                     assignDeathNumber(deathSelectNewCelebVal);
      
                     console.log('This is the new deathNumber', deathNumber);
+                    deathObj = {};
+                    console.log('here is the deathObj', deathObj);
                });
 
                

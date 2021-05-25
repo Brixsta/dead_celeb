@@ -82,13 +82,15 @@ $( document ).ready(function() {
                 results = data;
                 console.log('These are the new results: ', results);
 
+
+                    deathSelectNewCelebVal = $deathSelectNewCeleb.val().toLowerCase();
+                    console.log('This is the new deathSelectNewCelebVal: ', deathSelectNewCelebVal);
+                    assignDeathNumber(deathSelectNewCelebVal);
+     
+                    console.log('This is the new deathNumber', deathNumber);
                });
 
-               deathSelectNewCelebVal = $deathSelectNewCeleb.val().toLowerCase();
-
-               assignDeathNumber(deathSelectNewCelebVal);
-
-               console.log('This is the new deathNumber');
+               
 
      
           });

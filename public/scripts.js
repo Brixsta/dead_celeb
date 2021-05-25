@@ -72,7 +72,9 @@ $( document ).ready(function() {
                console.log('firstNameInput.val() is: ', $firstNameInput.val());
                console.log('lastNameInput.val() is: ', $lastNameInput.val());
 
-               let data = {firstname:$firstNameInput.val(), lastName:$lastNameInput.val()};
+               // let data = {firstname:$firstNameInput.val(), lastName:$lastNameInput.val()};
+
+               let data = {firstname:$firstNameInput.val()};
 
                makeRequest(data);
 
@@ -82,15 +84,15 @@ $( document ).ready(function() {
                 console.log('These are the new results: ', results);
 
 
-                    deathSelectNewCelebVal = $deathSelectNewCeleb.val().toLowerCase();
-                    console.log('This is the new deathSelectNewCelebVal: ', deathSelectNewCelebVal);
-                    assignDeathNumber(deathSelectNewCelebVal);
+                    // deathSelectNewCelebVal = $deathSelectNewCeleb.val().toLowerCase();
+                    // console.log('This is the new deathSelectNewCelebVal: ', deathSelectNewCelebVal);
+                    // assignDeathNumber(deathSelectNewCelebVal);
      
-                    console.log('This is the new deathNumber', deathNumber);
-                    deathObj = {};
-                    console.log('here is the deathObj', deathObj);
-                    celebToDeathMap(results);
-                    console.log('here is the deathObj after mapping');
+                    // console.log('This is the new deathNumber', deathNumber);
+                    // deathObj = {};
+                    // console.log('here is the deathObj', deathObj);
+                    // celebToDeathMap(results);
+                    // console.log('here is the deathObj after mapping');
                });
 
                

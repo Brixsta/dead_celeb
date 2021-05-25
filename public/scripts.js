@@ -93,7 +93,7 @@ $( document ).ready(function() {
                     return;
                }
 
-               $('.celebBox').remove();
+               $('.celebBox').fadeOut();
 
                const data = {firstname:$firstNameInput.val(), lastName:$lastNameInput.val()};
                console.log('heres the request', makeRequest(data));

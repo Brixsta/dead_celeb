@@ -90,7 +90,7 @@ $( document ).ready(function() {
                     aids: [],
                     car_crash: []
                };
-
+               console.log('these are the new results length', results.length);
                celebToDeathMap(results);
                createProfile();  
                createTable(results);
@@ -102,8 +102,7 @@ $( document ).ready(function() {
                 console.log('These are the new results: ', results);
                });
 
-               
-
+          
      
           });
 

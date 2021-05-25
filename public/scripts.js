@@ -95,7 +95,8 @@ $( document ).ready(function() {
 
                $('.celebBox').fadeOut();
                deathNumber = 0;
-
+               console.log('firstNameInput.val() is: ', $firstNameInput.val());
+               console.log('lastNameInput.val() is: ', $lastNameInput.val());
                console.log('death Number is ', deathNumber);
 
                const data = {firstname:$firstNameInput.val(), lastName:$lastNameInput.val()};

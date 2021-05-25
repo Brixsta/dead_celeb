@@ -70,6 +70,7 @@ $( document ).ready(function() {
 
                $('.celebBox').fadeOut();
                deathNumber = 0;
+               console.log('deathSelectNewCelebVal is: ',deathSelectNewCelebVal);
                assignDeathNumber(deathSelectNewCelebVal);
                let data = {firstName:$firstNameInput.val(), lastName:$lastNameInput.val(), deathId:deathNumber};
                console.log('about to send this data');

@@ -83,7 +83,7 @@ $( document ).ready(function() {
           // user clicks to add a dead celeb
           $addCelebBtn.click((event)=>{
                console.log('addNewCeleb has been pressed');
-               const data = {firstname:$('.firstNameInput'), lastName:$('lastNameInput')};
+               const data = {firstname:$('.firstNameInput'), lastName:$('.lastNameInput')};
                console.log('heres the request', makeRequest(data));
           });
 

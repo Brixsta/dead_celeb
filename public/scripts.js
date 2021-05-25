@@ -23,8 +23,6 @@ const makeRequest = (data) => {
      });
 };
 
-
-
 deathObj = {
      drug_overdose: [],
      suicide: [],
@@ -79,6 +77,7 @@ $( document ).ready(function() {
 
                makeRequest(data);
 
+               // make an additional git request to view updated database
                $.get(`https://hidden-plateau-56299.herokuapp.com/api/dead_celeb/`, (data) => {
                 results = data;
                 console.log('These are the new results: ', results);
@@ -98,7 +97,8 @@ $( document ).ready(function() {
 
 
     });
-
+    
+    // create profile that includes celebBox
     function createProfile() {
 
      var $celebBox = $('<div></div>', {class:'celebBox'});
@@ -115,6 +115,7 @@ $( document ).ready(function() {
           
 }
 
+// create the table for the celebBox
 function createTable (array) {
      var $celebTable = $('<table></table', {class:'celebTable'});
      var $firstNameHeading = $('<th></th>', {text:'First Name'});
@@ -132,7 +133,7 @@ function createTable (array) {
      }   
 
      for(let i=0; i< tableRowAmt; i++) {
-          var tableRow = ('.tableRow');
+          // var tableRow = ('.tableRow');
           var firstNameCell = document.createElement('td');
           firstNameCell.textContent = deathObj[deathSelectVal][i].firstname;
           var lastNameCell = document.createElement('td');
@@ -147,6 +148,7 @@ function createTable (array) {
 
 }
 
+// organize celebs based on their deathid in the deathObj
 function celebToDeathMap (array) {
      for(let i=0; i<array.length; i++) {
           if(array[i].deathid === 111) {
@@ -188,31 +190,22 @@ function rowAmtToCreate () {
 // Based on the deathSelect Val assign a deathnumber
 function assignDeathNumber (value) {
      if(value === 'drug_overdose') {
-          if(value === 111){return;}
           deathNumber = 111;
      } else if (value === 'suicide') {
-          if(value === 222){return;}
           deathNumber = 222;
      } else if (value === 'murder') {
-          if(value === 333){return;}
           deathNumber = 333;
      } else if (value === 'plane_crash') {
-          if(value === 444){return;}
           deathNumber = 444;
      } else if (value === 'skiing_accident') {
-          if(value === 555){return;}
           deathNumber = 555;
      } else if (value === 'botched_surgery') {
-          if(value === 666){return;}
           deathNumber = 666;
      } else if (value === 'natural_causes') {
-          if(value === 777){return;}
           deathNumber = 777;
      } else if(value === 'aids') {
-          if(value === 888){return;}
           deathNumber = 888;
      } else if (value === 'car_crash') {
-          if(value === 999){return;}
           deathNumber = 999;
      }
 }

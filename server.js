@@ -42,6 +42,7 @@ app.post('/api/dead_celeb', (req,res)=>{
     const newCeleb = req.body;
 
     console.log(req.body);
+    res.json(req.body);
 
     // db.query('INSERT INTO celeb (firstName, lastName, deathId) VALUES ($1, $2, $3);', [newCeleb.firstName,
     // newCeleb.lastName, newCeleb.deathId], (err,data)=>{

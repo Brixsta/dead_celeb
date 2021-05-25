@@ -99,7 +99,7 @@ $( document ).ready(function() {
                console.log('lastNameInput.val() is: ', $lastNameInput.val());
                console.log('death Number is ', deathNumber);
 
-               const data = {firstname:$firstNameInput.val(), lastName:$lastNameInput.val()};
+               let data = {firstname:$firstNameInput.val(), lastName:$lastNameInput.val()};
 
                makeRequest(data);
 

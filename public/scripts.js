@@ -87,9 +87,13 @@ $( document ).ready(function() {
 
                if($firstNameInput.val().length < 1) {
                     alert('Please fill all fields before submitting a new Dead Celeb');
+                    return;
                } else if ($lastNameInput.val().length < 1) {
                     alert('Please fill all fields before submitting a new Dead Celeb');
+                    return;
                }
+
+               $('.celebBox').remove();
 
                const data = {firstname:$firstNameInput.val(), lastName:$lastNameInput.val()};
                console.log('heres the request', makeRequest(data));

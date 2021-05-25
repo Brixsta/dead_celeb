@@ -101,7 +101,7 @@ $( document ).ready(function() {
 
                const data = {firstname:$firstNameInput.val(), lastName:$lastNameInput.val()};
 
-               makeRequest.data();
+               makeRequest.data;
           });
 
           

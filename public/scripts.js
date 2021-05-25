@@ -99,6 +99,8 @@ $( document ).ready(function() {
                 console.log('These are the new results: ', results);
                     // celebToDeathMap(results);
 
+                    console.log('this is the deathObj', deathObj);
+                    celebHasBeenAdded();
                     // createProfile(deathSelectNewCelebVal);  
                     // createTable(results,deathSelectNewCelebVal);
                });
@@ -123,7 +125,7 @@ $( document ).ready(function() {
      var $celebHeading = $('<h1></h1>', {class:'celebHeading', text:`Celebrity deaths: ${str.toLowerCase().replace('_', ' ')}`});
      var $celebDivider = $('<hr>', {class:'celebDivider'});
      // var $celebInfo = $('<p></p>', {class:'celebInfo', text:`${JSON.stringify(listOfDead(results, deathNumber))}`});
-
+     $('.celebAddedBox').remove();
      $('.celebBox').remove();
 
      $body.append($celebBox);
@@ -229,4 +231,10 @@ function assignDeathNumber (value) {
      } else if (value === 'car_crash') {
           deathNumber = 999;
      }
+}
+
+function celebHasBeenAdded () {
+     var $celebAddedBox = $('<div></div>', {class:'celebAddedBox', text:`Your dead celeb has been added`});
+
+     $body.append($celebAddedBox);
 }

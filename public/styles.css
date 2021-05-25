@@ -147,6 +147,17 @@ body {
     box-shadow:0px 0px 10px rgba(255, 255, 255, .3);
 }
 
+.celebAddedBox {
+    height:100%;
+    width:500px;
+    background-color:rgb(30, 30, 30);
+    border-radius:5px;
+    margin:auto;
+    margin-top:20px;
+    padding:15px 20px;
+    box-shadow:0px 0px 10px rgba(255, 255, 255, .3);
+}
+
 .celebHeading {
     text-align:center;
     font-family: 'EB Garamond', serif;
